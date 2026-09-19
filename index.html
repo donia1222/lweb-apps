@@ -645,7 +645,8 @@ header{border-bottom:0!important}
  .burger[aria-expanded="true"] span:nth-child(2){transform:translate(-50%,-50%) rotate(-45deg)}
  .mnav{display:block;position:fixed;inset:0;z-index:45;background:#fff;transform:translateY(102%);visibility:hidden;transition:transform .6s cubic-bezier(.22,1,.36,1),visibility 0s linear .6s;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
  .mnav.open{transform:none;visibility:visible;transition:transform .6s cubic-bezier(.22,1,.36,1),visibility 0s}
- body.menu-open{overflow:hidden}
+ body.menu-open{overflow:hidden;position:fixed;left:0;right:0;width:100%}
+ body.menu-open header{position:fixed;top:0;left:0;right:0;width:100%}
  body.menu-open header{background:#fff;border-bottom:0;box-shadow:0 10px 24px -18px rgba(28,42,57,.35);-webkit-backdrop-filter:none;backdrop-filter:none}
  header{transition:background .3s,border-color .3s}
  .mnav-bg{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
@@ -1128,7 +1129,7 @@ if(cf){cf.addEventListener('submit',function(e){
 })}
 
 var b=document.getElementById('burger'),m=document.getElementById('mnav');
-function setMenu(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schliessen':'Menü öffnen');m.setAttribute('aria-hidden',!o);document.body.classList.toggle('menu-open',o)}
+function setMenu(o){var d=document.body;if(o===m.classList.contains('open'))return;if(o){var y=window.pageYOffset||0;d.setAttribute('data-sy',y);d.style.top=(-y)+'px'}m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schliessen':'Menü öffnen');m.setAttribute('aria-hidden',!o);d.classList.toggle('menu-open',o);if(!o){var y2=parseInt(d.getAttribute('data-sy')||'0',10);d.style.top='';d.removeAttribute('data-sy');window.scrollTo(0,y2)}}
 b.addEventListener('click',function(){setMenu(!m.classList.contains('open'))});
 m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});

@@ -59,11 +59,12 @@ section{padding:96px 0}
 .header-logo img{height:28px;width:auto;border-radius:6px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .header-logo img{background:#fff;padding:3px 5px}}
 :root[data-theme="dark"] .header-logo img{background:#fff;padding:3px 5px}
-.header-logo .tag{background:var(--cerulean50);color:var(--cerulean500);font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px}
 .header-nav{display:flex;align-items:center;gap:4px}
 .header-nav a{padding:9px 14px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--gunpowder700)}
 .header-nav a:hover{background:var(--gunpowder50)}
 .header-nav .header-nav-web{color:var(--cerulean500)}
+#mobileNav{align-items:stretch;position:absolute;top:72px;left:0;right:0;background:var(--bg);box-shadow:0 12px 24px rgba(0,0,0,.08);max-height:calc(100vh - 72px);overflow-y:auto}
+#mobileNav a{padding:13px 14px;font-size:16px}
 .header-actions{display:flex;align-items:center;gap:10px}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .burger svg{width:24px;height:24px;color:var(--ink)}
@@ -93,6 +94,13 @@ section{padding:96px 0}
   .hero-inner{grid-template-columns:1fr}
   .phones{height:420px;margin-top:10px}
   h1{font-size:38px}
+}
+@media (max-width:600px){
+  .phones{height:calc((100vw - 48px)*1.05);overflow:hidden}
+  .phone{width:46%;border-width:4px;border-radius:24px}
+  .phone--a{left:3%}
+  .phone--b{left:50%;top:8%}
+  .phone--c{left:0;top:23%;width:40%}
 }
 
 /* ===== TRUST STRIP ===== */

@@ -479,6 +479,7 @@ html,body{overflow-x:hidden}
  .proj-panel .shot:nth-child(2){margin-left:-5%}
 }
 button,input,textarea,.btn{font-family:inherit}
+.form-note{margin:2px 0 0;font-size:13px;line-height:1.5;color:#6b7d99}.form-note a{color:var(--accent-dark);font-weight:700}
 header{border-bottom:0!important}
 @media(max-width:960px){.hero-grid>.mock-wrap{order:-1}.hero .hero-art{max-width:330px}.hero{padding-top:10px!important}.hero-grid{gap:14px!important}}
 .nav-left{display:flex;align-items:center;gap:14px}
@@ -600,7 +601,6 @@ header{border-bottom:0!important}
  <g fill="#ffb703"><circle cx="40" cy="430" r="4"><animate attributeName="opacity" values=".3;1;.3" dur="2.6s" repeatCount="indefinite"/></circle><circle cx="372" cy="380" r="3.5" fill="#0a9b7c"><animate attributeName="opacity" values="1;.3;1" dur="3.2s" repeatCount="indefinite"/></circle></g>
 </svg>
 <nav class="mnav-in" aria-label="Mobile Navigation">
- <span class="mnav-kicker m-in" style="--i:-1">Menü</span>
  <ul class="mnav-list"><li class="m-in" style="--i:0"><a href="index.html#fuerwen"><span class="mt">Für wen<small>Für welche Betriebe</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:1"><a href="index.html#projekte"><span class="mt">Projekte<small>6 Apps im Einsatz</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:2"><a href="index.html#faehigkeiten"><span class="mt">Fähigkeiten<small>Was Ihre App kann</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:3"><a href="index.html#ablauf"><span class="mt">Ablauf<small>In 5 Schritten zur App</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:4"><a href="index.html#preise"><span class="mt">Preise<small>Ab 3.500 CHF</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:5"><a class="m-ext" href="https://lweb.ch/"><span class="mt">Webseiten<small>lweb.ch</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrowup"/></svg></span></a></li></ul>
  <a class="btn btn-primary mnav-cta m-in" style="--i:6" href="index.html#kontakt">Kostenloses Erstgespräch</a>
  <div class="mnav-contact m-in" style="--i:7"><a href="mailto:info@lweb.ch"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-mail"/></svg> info@lweb.ch</a><a href="tel:+41765608645"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tel"/></svg> +41 76 560 86 45</a></div>
@@ -641,6 +641,25 @@ header{border-bottom:0!important}
 </footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
+
+function buildMailto(name,mail,tel,idea){
+  var subject='Anfrage: App-Entwicklung / Erstgespräch';
+  var body='Guten Tag Herr Salvador\n\n'+
+    'ich habe Ihre Seite ihreapp.ch besucht und interessiere mich für eine eigene App.\n\n'+
+    'Könnten Sie mich bitte kontaktieren oder mit mir einen Termin für ein kostenloses Erstgespräch vereinbaren?\n\n'+
+    'Meine Idee in Kürze:\n'+idea+'\n\n'+
+    'Meine Angaben:\nName: '+name+'\nE-Mail: '+mail+(tel?'\nTelefon: '+tel:'')+'\n\n'+
+    'Freundliche Grüsse\n'+name;
+  return 'mailto:info@lweb.ch?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+}
+var cf=document.getElementById('contactForm');
+if(cf){cf.addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=function(id){return (document.getElementById(id).value||'').trim()};
+  window.location.href=buildMailto(v('name'),v('email'),v('phone'),v('idea'));
+  var n=document.getElementById('formNote');if(n)n.hidden=false;
+})}
+
 var b=document.getElementById('burger'),m=document.getElementById('mnav');
 function setMenu(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schliessen':'Menü öffnen');m.setAttribute('aria-hidden',!o);document.body.classList.toggle('menu-open',o)}
 b.addEventListener('click',function(){setMenu(!m.classList.contains('open'))});

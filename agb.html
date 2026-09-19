@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Allgemeine Geschäftsbedingungen | Lweb Apps</title>
+<meta name="description" content="Die Bedingungen für Aufträge im Bereich App-Entwicklung. Lweb – Salvador Lopez, Sevelen SG.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ihreapp.ch/agb.html">
+<meta name="theme-color" content="#1c2a39">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --text:#212529;
+    --text-soft:#5b6472;
+    --navy:#1c2a39;
+    --navy-soft:#3f4960;
+    --accent:#fe6c75;
+    --accent-dark:#e85560;
+    --panel-blue:#f2fbff;
+    --panel-purple:#f6f3fc;
+    --panel-orange:#fff2e3;
+    --panel-sky:#dff6ff;
+    --panel-yellow:#fff2bd;
+    --panel-pink:#ffe9eb;
+    --panel-teal:#d1fff4;
+    --panel-neutral:#f8fafc;
+    --radius-lg:24px;
+    --radius-md:16px;
+    --radius-sm:10px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Plus Jakarta Sans', Arial, sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  h1,h2,h3,h4{color:var(--navy);margin:0 0 16px;font-weight:800;line-height:1.15;}
+  h2{font-size:36px;}
+  h3{font-size:22px;}
+  p{color:var(--text-soft);margin:0 0 16px;}
+  .eyebrow{
+    display:inline-block;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--accent-dark);
+    background:var(--panel-pink);
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:16px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 26px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+    border:2px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -8px rgba(254,108,117,.55);}
+  .btn-primary:hover{background:var(--accent-dark);}
+  .btn-outline{background:#fff;color:var(--navy);border-color:#e3e7ee;}
+  .btn-outline:hover{border-color:var(--navy);}
+  .btn-ghost{background:transparent;color:var(--navy);}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #eef0f4;
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:var(--navy);}
+  .logo-mark{
+    width:34px;height:34px;border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),#ffb199);
+    position:relative;flex:none;
+  }
+  .logo-mark::after{
+    content:"";position:absolute;inset:9px;
+    border-radius:6px;background:#fff;
+  }
+  .logo span{color:var(--accent);}
+  .nav-links{display:flex;gap:32px;font-weight:600;font-size:15px;color:var(--navy-soft);}
+  .nav-links a:hover{color:var(--navy);}
+  .nav-right{display:flex;align-items:center;gap:20px;}
+  .nav-cta-group{display:flex;align-items:center;gap:20px;}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+  .burger span{width:24px;height:2px;background:var(--navy);display:block;border-radius:2px;}
+
+  /* Hero */
+  .hero{padding:72px 0 40px;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;}
+  .hero h1{font-size:52px;letter-spacing:-.01em;}
+  .hero h1 em{font-style:normal;color:var(--accent);}
+  .hero p.lead{font-size:18px;max-width:520px;}
+  .check-list{margin:24px 0 32px;display:flex;flex-direction:column;gap:12px;}
+  .check-list li{display:flex;align-items:flex-start;gap:10px;font-weight:600;color:var(--navy);font-size:15px;}
+  .check-ico{
+    flex:none;width:22px;height:22px;border-radius:50%;
+    background:var(--panel-teal);color:#0a9b7c;
+    display:flex;align-items:center;justify-content:center;font-size:13px;
+    margin-top:1px;
+  }
+  .hero-ctas{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+  .hero-note{font-size:13px;color:var(--text-soft);margin-top:10px;}
+
+  /* Phone mockup (pure CSS, no external images) */
+  .mock-wrap{position:relative;display:flex;justify-content:center;}
+  .mock-panel{
+    width:100%;max-width:380px;
+    background:linear-gradient(180deg,var(--panel-blue),#eaf7ff);
+    border-radius:32px;
+    padding:28px;
+    position:relative;
+    box-shadow:0 30px 60px -20px rgba(28,42,57,.25);
+  }
+  .phone{
+    background:#fff;border-radius:26px;padding:14px;
+    box-shadow:0 20px 40px -15px rgba(28,42,57,.35);
+  }
+  .phone-notch{width:60px;height:6px;background:#e3e7ee;border-radius:4px;margin:0 auto 10px;}
+  .phone-row{display:flex;gap:8px;margin-bottom:8px;}
+  .phone-pill{flex:1;height:14px;border-radius:999px;background:var(--panel-neutral);}
+  .phone-pill.short{flex:none;width:36px;}
+  .phone-card{
+    background:var(--panel-purple);border-radius:14px;height:70px;margin-bottom:10px;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+  }
+  .dot{width:10px;height:10px;border-radius:50%;}
+  .grid-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px;}
+  .grid-icons div{
+    aspect-ratio:1;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    font-size:16px;
+  }
+  .float-chip{
+    position:absolute;background:#fff;border-radius:14px;
+    box-shadow:0 12px 30px -10px rgba(28,42,57,.3);
+    padding:10px 14px;font-size:12px;font-weight:700;color:var(--navy);
+    display:flex;align-items:center;gap:8px;
+  }
+  .float-chip .dotcol{width:8px;height:8px;border-radius:50%;background:var(--accent);}
+  .chip-top{top:-18px;right:-10px;}
+  .chip-bottom{bottom:10px;left:-24px;}
+
+  /* Sections */
+  section{padding:88px 0;}
+  .section-head{max-width:680px;margin:0 auto 48px;text-align:center;}
+  .section-head.left{margin:0 0 48px;text-align:left;}
+
+  /* Feature list section */
+  .feature-split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .feature-list li{
+    display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #eef0f4;
+    font-weight:600;color:var(--navy);
+  }
+  .feature-list li:last-child{border-bottom:none;}
+  .num-badge{
+    flex:none;width:28px;height:28px;border-radius:8px;background:var(--panel-yellow);
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#8a6d00;
+  }
+  .stat-card{
+    background:var(--panel-orange);border-radius:var(--radius-lg);padding:32px;
+  }
+
+  /* Comparison */
+  .compare-wrap{background:var(--panel-neutral);border-radius:32px;padding:48px;}
+  .compare-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:stretch;}
+  .compare-card{background:#fff;border-radius:var(--radius-lg);padding:32px;border:1px solid #eef0f4;}
+  .compare-card.bad{opacity:.8;}
+  .compare-card.good{border:2px solid var(--accent);box-shadow:0 20px 40px -20px rgba(254,108,117,.4);}
+  .compare-vs{
+    align-self:center;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;
+  }
+  .compare-list li{display:flex;gap:10px;padding:8px 0;font-size:14px;color:var(--text-soft);}
+  .x-ico,.ok-ico{flex:none;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;}
+  .x-ico{background:#ffe3e3;color:#d5484f;}
+  .ok-ico{background:var(--panel-teal);color:#0a9b7c;}
+  .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px;}
+  .tag.bad{background:#ffe3e3;color:#d5484f;}
+  .tag.good{background:var(--panel-teal);color:#0a9b7c;}
+
+  /* Native apps */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .platform-card{
+    border-radius:var(--radius-lg);padding:32px;background:var(--panel-blue);
+  }
+  .platform-card.android{background:var(--panel-teal);}
+  .platform-badge{
+    width:52px;height:52px;border-radius:16px;background:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;
+    box-shadow:0 10px 20px -8px rgba(28,42,57,.2);
+  }
+
+  /* AI section */
+  .ai-section{background:var(--navy);color:#fff;border-radius:40px;margin:0 24px;padding:64px 48px;}
+  .ai-section .wrap{max-width:1080px;padding:0;}
+  .ai-section h2, .ai-section h3{color:#fff;}
+  .ai-section p{color:#c4cbd8;}
+  .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .chat-mock{background:#24344a;border-radius:20px;padding:20px;}
+  .chat-bubble{
+    background:#fff;color:var(--navy);border-radius:16px;padding:12px 16px;
+    font-size:13px;font-weight:600;margin-bottom:10px;max-width:85%;
+  }
+  .chat-bubble.me{background:var(--accent);color:#fff;margin-left:auto;}
+  .chat-meta{font-size:11px;color:#8a93a6;margin:6px 0 16px;}
+  .code-mock{background:#101825;border-radius:20px;padding:20px;font-family:monospace;font-size:12px;color:#8fd6ff;}
+  .code-line{padding:3px 0;color:#9fb2c9;}
+  .code-line b{color:#8fd6ff;}
+
+  /* Use cases grid */
+  .cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .usecase-card{
+    border-radius:var(--radius-md);padding:24px;background:var(--panel-neutral);
+    border:1px solid #eef0f4;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .usecase-card:hover{transform:translateY(-4px);box-shadow:0 16px 30px -14px rgba(28,42,57,.25);}
+  .usecase-ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px;}
+  .usecase-card a{font-weight:700;color:var(--accent-dark);font-size:14px;}
+
+  /* Steps */
+  .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .step-card{text-align:left;}
+  .step-num{
+    width:40px;height:40px;border-radius:12px;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:16px;
+  }
+
+  /* Extensions */
+  .ext-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+  .ext-card{
+    background:var(--panel-neutral);border-radius:var(--radius-md);padding:20px 14px;
+    text-align:center;border:1px solid #eef0f4;
+  }
+  .ext-ico{width:40px;height:40px;border-radius:10px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;font-weight:800;}
+  .ext-card span{font-size:13px;font-weight:700;color:var(--navy);}
+
+  /* Design system */
+  .swatch-row{display:flex;gap:12px;margin:20px 0;flex-wrap:wrap;}
+  .swatch{width:44px;height:44px;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);}
+
+  /* Stats */
+  .stats-section{background:var(--navy);color:#fff;}
+  .stats-section h2{color:#fff;}
+  .stats-section p{color:#c4cbd8;}
+  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;text-align:center;}
+  .stat-num{font-size:44px;font-weight:800;color:var(--accent);}
+  .stat-label{color:#c4cbd8;font-size:14px;margin-top:6px;}
+
+  /* Testimonials */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .testi-card{
+    background:var(--panel-neutral);border-radius:var(--radius-md);padding:24px;border:1px solid #eef0f4;
+  }
+  .stars{color:#ffb800;font-size:14px;margin-bottom:10px;letter-spacing:2px;}
+  .testi-card p{font-size:14px;color:var(--navy-soft);margin-bottom:14px;}
+  .testi-name{font-size:13px;font-weight:800;color:var(--navy);}
+  .testi-role{font-size:12px;color:var(--text-soft);}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid #eef0f4;}
+  .faq-item summary{
+    cursor:pointer;padding:20px 0;font-weight:700;color:var(--navy);
+    display:flex;justify-content:space-between;align-items:center;list-style:none;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";font-size:22px;color:var(--accent);font-weight:400;}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{padding-bottom:20px;margin:0;}
+
+  /* Final CTA */
+  .final-cta{
+    background:linear-gradient(135deg,var(--accent),#ff9d8f);
+    border-radius:32px;margin:0 24px;padding:64px 40px;text-align:center;color:#fff;
+  }
+  .final-cta h2{color:#fff;}
+  .final-cta p{color:rgba(255,255,255,.9);}
+  .final-cta .btn-primary{background:#fff;color:var(--accent-dark);box-shadow:none;}
+  .final-cta .btn-primary:hover{background:#fff5f5;}
+
+  footer{padding:64px 0 32px;border-top:1px solid #eef0f4;margin-top:40px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px;margin-bottom:48px;}
+  .footer-col h4{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);margin-bottom:16px;}
+  .footer-col ul li{margin-bottom:10px;}
+  .footer-col ul a{font-size:14px;color:var(--text-soft);}
+  .footer-col ul a:hover{color:var(--navy);}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--text-soft);flex-wrap:wrap;gap:12px;}
+
+  @media (max-width: 960px){
+    .hero-grid,.feature-split,.two-col,.ai-grid,.compare-grid{grid-template-columns:1fr;}
+    .compare-grid{gap:16px;}
+    .compare-vs{justify-self:center;}
+    .cards-grid{grid-template-columns:repeat(2,1fr);}
+    .ext-grid{grid-template-columns:repeat(3,1fr);}
+    .steps-grid{grid-template-columns:repeat(2,1fr);}
+    .stats-grid{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .nav-links{display:none;}
+    .burger{display:flex;}
+    .hero h1{font-size:38px;}
+    h2{font-size:28px;}
+    .ai-section,.final-cta{margin:0 12px;padding:40px 24px;}
+  }
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.14em;flex:none}
+.stars{display:inline-flex;gap:2px}
+.check-ico svg.i,.x-ico svg.i,.ok-ico svg.i{width:.8em;height:.8em;vertical-align:middle}
+.float-chip svg.i{margin-right:6px}
+.chat-bubble svg.i{color:#4dd35b;margin-right:4px}
+
+/* ===== Lweb Apps additions ===== */
+.logo{flex-direction:column;align-items:flex-start;gap:0;line-height:1;font-size:24px;font-weight:800;letter-spacing:-.01em;color:var(--navy)}
+.logo small{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;letter-spacing:.01em;color:#5b6b8c;margin-top:3px;white-space:nowrap}
+.logo small svg{width:11px;height:11px;display:block;flex:none}
+.nav-links a,.nav-right a{white-space:nowrap}
+.nav-links .weblink{color:var(--accent-dark)}
+.mobnav{display:none;flex-direction:column;padding:8px 24px 18px;border-top:1px solid #eef0f4;background:#fff}
+.mobnav a{padding:12px 0;font-weight:600;color:var(--navy);border-bottom:1px solid #f1f3f7}
+.mobnav.open{display:flex}
+.hero-panel{width:100%;max-width:420px;height:520px;background:linear-gradient(180deg,var(--panel-blue),#eaf7ff);border-radius:32px;position:relative;box-shadow:0 30px 60px -20px rgba(28,42,57,.25);overflow:hidden}
+.hp{position:absolute;background:#fff;border:5px solid #fff;border-radius:28px;overflow:hidden;box-shadow:0 20px 40px -15px rgba(28,42,57,.4)}
+.hp img{width:100%;height:auto;display:block}
+.hp.main{width:200px;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3}
+.hp.l{width:160px;left:-14px;top:52%;transform:translateY(-50%) rotate(-7deg);z-index:2}
+.hp.r{width:160px;right:-14px;top:48%;transform:translateY(-50%) rotate(7deg);z-index:1}
+.badges{display:flex;gap:12px;align-items:center;margin-top:24px}
+.badges img{height:42px;width:auto;display:block}
+.cards-grid.three{grid-template-columns:repeat(3,1fr)}
+.usecase-card h4{font-size:17px}.usecase-card p{font-size:14px}
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:36px 0}
+.proj.rev .proj-text{order:2}
+.proj-kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:10px}
+.proj-title{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.proj-title img{width:54px;height:54px;border-radius:14px;box-shadow:0 8px 20px -8px rgba(28,42,57,.35)}
+.proj-title h3{margin:0;font-size:28px}
+.proj-text p{font-size:16px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.pills span{padding:5px 12px;border-radius:999px;background:var(--panel-pink);border:1px solid #ffd6da;color:var(--navy-soft);font-size:12.5px;font-weight:700}
+.proj-links{display:flex;gap:20px;flex-wrap:wrap}
+.proj-links a{font-weight:700;color:var(--accent-dark);font-size:15px}
+.proj-links a:hover{text-decoration:underline}
+.proj-panel{border-radius:32px;padding:36px 20px;display:flex;justify-content:center;align-items:center;min-height:440px;position:relative;overflow:hidden}
+.proj-panel .shot{width:44%;background:#fff;border:5px solid #fff;border-radius:26px;overflow:hidden;box-shadow:0 20px 40px -15px rgba(28,42,57,.4)}
+.proj-panel .shot img{width:100%;height:auto;display:block}
+.proj-panel .shot:nth-child(1){transform:rotate(-4deg) translateY(12px);z-index:2}
+.proj-panel .shot:nth-child(2){transform:rotate(4deg) translateY(-12px);margin-left:-3%}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.price-card{background:#fff;border-radius:var(--radius-lg);padding:32px;border:1px solid #eef0f4;display:flex;flex-direction:column}
+.price-card.good{border:2px solid var(--accent);box-shadow:0 20px 40px -20px rgba(254,108,117,.4)}
+.price-card h3{font-size:20px;margin-bottom:6px}
+.price-card .pr{font-weight:800;color:var(--accent-dark);margin-bottom:10px}
+.price-card ul{margin-top:8px}
+.price-card li{display:flex;gap:10px;padding:7px 0;font-size:14px;color:var(--navy);font-weight:600}
+.price-note{text-align:center;margin-top:28px}
+.about-img{border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 30px 60px -25px rgba(28,42,57,.35)}
+.about-img img{width:100%;height:auto;display:block}
+.stats-grid.four{grid-template-columns:repeat(4,1fr)}
+.stats-section .badges{justify-content:center;margin-top:40px}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;text-align:left}
+.cta-grid h2{color:#fff}
+.crow{display:flex;gap:10px;align-items:center;margin-top:14px;font-weight:700;color:#fff}
+.cta-form{background:#fff;border-radius:24px;padding:28px;color:var(--navy);display:grid;gap:12px}
+.cta-form label{display:block;font-size:12px;font-weight:800;color:var(--navy);margin-bottom:5px}
+.cta-form input,.cta-form textarea{width:100%;border:2px solid #e3e7ee;border-radius:12px;padding:12px 14px;font:inherit;color:var(--navy);background:#fff}
+.cta-form input:focus,.cta-form textarea:focus{outline:none;border-color:var(--accent)}
+.cta-form textarea{min-height:96px;resize:vertical}
+.cta-form .btn{justify-self:start}
+.final-cta .btn-primary{background:#fff;color:var(--accent-dark);box-shadow:none}
+.final-cta .btn-primary:hover{background:#fff5f5}
+.cta-form .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -8px rgba(254,108,117,.55)}
+.cta-form .btn-primary:hover{background:var(--accent-dark)}
+.footer-bottom a{color:var(--text-soft)}.footer-bottom a:hover{color:var(--navy)}
+@media (max-width:960px){
+ .proj{grid-template-columns:1fr;gap:28px}.proj.rev .proj-text{order:0}
+ .price-grid,.cta-grid{grid-template-columns:1fr}
+ .cards-grid.three{grid-template-columns:1fr 1fr}
+ .stats-grid.four{grid-template-columns:1fr 1fr}
+ .ext-grid.six{grid-template-columns:repeat(3,1fr)}
+ .steps-grid.five{grid-template-columns:repeat(2,1fr)}
+ .hero-panel{height:460px}
+}
+@media (max-width:560px){.cards-grid.three{grid-template-columns:1fr}.hero h1{font-size:34px}.ext-grid.six{grid-template-columns:repeat(2,1fr)}.steps-grid.five{grid-template-columns:1fr}.nav-right .btn-ghost{display:none}}
+.chat-bubble svg.i,.code-line svg.i,.float-chip svg.i{display:inline-block}
+.stats-section{position:relative;overflow:hidden;background:linear-gradient(160deg,#1c2a39 0%,#22344a 100%)}
+.stats-section::before{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(254,108,117,.28),transparent 68%);pointer-events:none}
+.stats-section::after{content:"";position:absolute;width:460px;height:460px;left:-160px;bottom:-220px;border-radius:50%;background:radial-gradient(circle,rgba(143,214,255,.16),transparent 68%);pointer-events:none}
+.stats-section .wrap{position:relative;z-index:1}
+.stat-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.stat-tile{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:28px 24px;backdrop-filter:blur(6px);transition:transform .2s ease,background .2s ease;text-align:left}
+.stat-tile:hover{transform:translateY(-4px);background:rgba(255,255,255,.09)}
+.stat-ic{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;background:rgba(254,108,117,.16);color:var(--accent);font-size:22px;margin-bottom:22px}
+.stat-v{font-size:46px;font-weight:800;line-height:1;color:#fff;letter-spacing:-.02em;white-space:nowrap}
+.stat-v em{font-style:normal;color:var(--accent)}
+.stat-v.sm{font-size:24px;line-height:46px;letter-spacing:-.01em}
+.stat-l{margin-top:10px;font-size:14px;color:#aab4c6}
+.store-row{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:44px;padding-top:32px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.store-row>span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a93a6}
+.store-row .badges{margin-top:0}
+@media(max-width:960px){.stat-cards{grid-template-columns:1fr 1fr}.stat-v{font-size:38px}.stat-v.sm{font-size:19px;line-height:38px}}
+@media(max-width:480px){.stat-cards{grid-template-columns:1fr}}
+.hero-photo{position:relative;width:100%;max-width:540px;margin:0 auto}
+.hp-frame{border-radius:32px;overflow:hidden;background:#f3f4f7;box-shadow:0 40px 70px -30px rgba(28,42,57,.35),0 0 0 1px rgba(28,42,57,.06);aspect-ratio:1200/960}
+.hp-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.hp-chip{position:absolute;display:flex;align-items:center;gap:8px;background:#fff;border-radius:14px;padding:10px 14px;font-size:13px;font-weight:700;color:var(--navy);box-shadow:0 14px 30px -12px rgba(28,42,57,.35);animation:floatY 6s ease-in-out infinite}
+.hp-chip svg.i{color:var(--accent);font-size:16px}
+.hp-chip.c1{left:-18px;bottom:36px}
+.hp-chip.c2{right:-12px;top:26px;animation-delay:-3s}
+@media(prefers-reduced-motion:reduce){.hp-chip{animation:none}}
+@media(max-width:960px){.hero-photo{max-width:460px}.hp-chip.c1{left:8px;bottom:14px}.hp-chip.c2{right:8px;top:12px}}
+.hero-art{width:100%;max-width:540px;margin:0 auto}
+.hero-art svg{width:100%;height:auto;display:block;overflow:visible;font-family:'Plus Jakarta Sans',Arial,sans-serif}
+.hero-art .fl{animation:floatY 6s ease-in-out infinite}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hero-art .tile{transform-box:fill-box;transform-origin:center;animation:tilePop 9s ease-in-out infinite both}
+@keyframes tilePop{0%,3%{transform:scale(.3);opacity:0}11%{transform:scale(1.08);opacity:1}14%,88%{transform:scale(1);opacity:1}96%,100%{transform:scale(.3);opacity:0}}
+.hero-art .push{animation:pushIn 9s ease-in-out infinite both}
+@keyframes pushIn{0%,10%{transform:translateX(46px);opacity:0}18%,90%{transform:none;opacity:1}97%,100%{transform:translateX(46px);opacity:0}}
+.hero-art .tw{transform-box:fill-box;transform-origin:center;animation:twinkle 3.4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(.4) rotate(0);opacity:.25}50%{transform:scale(1.1) rotate(45deg);opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero-art .fl,.hero-art .tile,.hero-art .push,.hero-art .tw{animation:none}}
+.ext-grid.six{grid-template-columns:repeat(6,1fr)}
+@media (max-width:960px){
+ .nav-web,.mobnav a[href="https://lweb.ch"]{display:none!important}
+ .hero{padding:28px 0 0}.hero-grid{gap:24px}
+ .hero h1{font-size:32px;margin-bottom:12px}.hero p.lead{font-size:15.5px;margin-bottom:8px}
+ .check-list{margin:14px 0 20px;gap:9px}.check-list li{font-size:14px}
+ .hero-note{display:none}.badges{margin-top:18px}.badges img{height:36px}
+ section{padding:56px 0}
+}
+.steps-grid.five{grid-template-columns:repeat(5,1fr)}
+@media(max-width:1100px){.ext-grid.six{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:960px){.ext-grid.six{grid-template-columns:repeat(3,1fr)}.steps-grid.five{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ext-grid.six{grid-template-columns:repeat(2,1fr)}.steps-grid.five{grid-template-columns:1fr}.ext-card{padding:16px 10px}}
+html,body{overflow-x:hidden}
+button,input,textarea,.btn{font-family:inherit}
+.hero-art{max-width:470px}
+.about-img{max-width:400px;justify-self:start}
+@media(max-width:960px){.hero-art{max-width:350px}.about-img{max-width:300px;justify-self:center}}
+.mnav{display:none}
+@media(max-width:960px){
+ .nav-cta,.nav-web,.nav-right .btn{display:none!important}
+ .burger{display:block!important;position:relative;width:46px;height:46px;padding:0;border-radius:50%;background:#fff;border:1.5px solid #e3e7ee;box-shadow:0 10px 22px -12px rgba(28,42,57,.4);transition:background .35s,border-color .35s,transform .2s;-webkit-tap-highlight-color:transparent}
+ .burger:active{transform:scale(.92)}
+ .burger span{position:absolute;left:50%;top:50%;height:2px;border-radius:2px;background:var(--navy);margin:0;width:18px;transition:transform .45s cubic-bezier(.22,1,.36,1),background .3s,width .3s}
+ .burger span:nth-child(1){transform:translate(-50%,-5px)}
+ .burger span:nth-child(2){transform:translate(-25%,4px);width:12px}
+ .burger[aria-expanded="true"]{background:var(--navy);border-color:var(--navy)}
+ .burger[aria-expanded="true"] span{background:#fff;width:18px}
+ .burger[aria-expanded="true"] span:nth-child(1){transform:translate(-50%,-50%) rotate(45deg)}
+ .burger[aria-expanded="true"] span:nth-child(2){transform:translate(-50%,-50%) rotate(-45deg)}
+ .mnav{display:block;position:fixed;inset:0;z-index:45;background:#fff;transform:translateY(102%);visibility:hidden;transition:transform .6s cubic-bezier(.22,1,.36,1),visibility 0s linear .6s;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+ .mnav.open{transform:none;visibility:visible;transition:transform .6s cubic-bezier(.22,1,.36,1),visibility 0s}
+ body.menu-open{overflow:hidden}
+ body.menu-open header{background:transparent;border-bottom-color:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+ header{transition:background .3s,border-color .3s}
+ .mnav-bg{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+ .mnav-in{position:relative;z-index:1;min-height:100%;display:flex;flex-direction:column;padding:104px 20px 28px}
+ .mnav-kicker{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:14px}
+ .mnav-list{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+ .mnav-list a{display:flex;align-items:center;gap:14px;padding:13px 16px;border-radius:20px;background:rgba(255,255,255,.8);border:1px solid #eef0f4;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 12px 26px -20px rgba(28,42,57,.5);transition:transform .2s,border-color .2s}
+ .mnav-list a:active{transform:scale(.98);border-color:var(--accent)}
+ .mi{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:21px;flex:none;color:#fff}
+ .mt{flex:1;font-size:19px;font-weight:800;color:var(--navy);line-height:1.15}
+ .mt small{display:block;font-size:12.5px;font-weight:600;color:#8a93a6;margin-top:3px}
+ .ma{color:#b3bac8;font-size:18px;display:flex}
+ .mnav .m-in{opacity:0}
+ .mnav.open .m-in{animation:mIn .7s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(var(--i)*60ms + 200ms)}
+ @keyframes mIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+ .mnav-cta{width:100%;min-height:56px;font-size:16px}
+ .mnav-contact{display:flex;flex-direction:column;gap:12px;margin-top:22px;font-weight:700;font-size:14.5px;color:var(--navy)}
+ .mnav-contact a{display:flex;align-items:center;gap:10px}
+ .mnav-contact svg.i{color:var(--accent);font-size:18px}
+ .mnav-store{margin-top:auto;padding-top:28px;display:flex;gap:10px}
+ .mnav-store img{height:38px;width:auto}
+}
+@media(max-width:960px) and (prefers-reduced-motion:reduce){.mnav,.mnav.open{transition:none}.mnav .m-in{opacity:1}.mnav.open .m-in{animation:none}}
+.wrap.nav{padding-left:24px;padding-right:24px}
+@media(max-width:960px){
+ .wrap.nav{padding:10px 16px}
+ .logo{font-size:21px}
+ .logo small{font-size:10px;margin-top:2px;gap:4px}
+ .logo small svg{width:10px;height:10px}
+ .nav-right{gap:10px}
+ .nav-right .btn{padding:9px 16px;font-size:13px;box-shadow:none}
+ .burger span{width:20px;height:2px}
+ .burger{gap:4px;padding:4px}
+ .mobnav{padding:6px 16px 14px}
+}
+@media(max-width:380px){.nav-right .btn{padding:8px 12px;font-size:12px}.logo{font-size:19px}}
+
+.legal-hero{padding:64px 0 24px;text-align:left}
+.legal-hero h1{font-size:44px;margin:0 0 10px;letter-spacing:-.01em}
+.legal-hero p{max-width:640px;margin:0}
+.legal-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.legal-tabs a{padding:10px 18px;border-radius:999px;border:2px solid #e3e7ee;font-weight:700;font-size:14px;color:var(--navy);transition:.15s}
+.legal-tabs a:hover{border-color:var(--navy)}
+.legal-tabs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.legal-wrap{padding:24px 0 96px}
+.legal-card{background:#fff;border:1px solid #eef0f4;border-radius:28px;padding:44px;box-shadow:0 24px 50px -30px rgba(28,42,57,.25);max-width:860px}
+.legal-card h4{font-size:19px;margin:30px 0 8px;color:var(--navy)}
+.legal-card h4:first-child{margin-top:0}
+.legal-card p,.legal-card li{font-size:15.5px;line-height:1.7;color:var(--text-soft)}
+.legal-card p{margin:0 0 12px}
+.legal-card ul{margin:0 0 12px;padding-left:20px;list-style:disc}
+.legal-card a{color:var(--accent-dark);font-weight:700}
+.legal-card strong{color:var(--navy)}
+.legal-meta{margin-top:26px;padding-top:18px;border-top:1px solid #eef0f4;font-size:13px;color:#8a93a6}
+.legal-back{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:700;color:var(--accent-dark)}
+@media(max-width:960px){.legal-hero{padding:36px 0 12px}.legal-hero h1{font-size:32px}.legal-card{padding:26px 20px;border-radius:22px}}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">Lweb<small><svg width="12" height="12" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#d52b1e"/><rect x="6" y="13" width="20" height="6" rx="1" fill="#fff"/><rect x="13" y="6" width="6" height="20" rx="1" fill="#fff"/></svg>Salvador Lopez</small></a>
+    <nav class="nav-links"><a href="index.html#fuerwen">Für wen</a><a href="index.html#projekte">Projekte</a><a href="index.html#faehigkeiten">Fähigkeiten</a><a href="index.html#ablauf">Ablauf</a><a href="index.html#preise">Preise</a><a href="index.html#faq">FAQ</a></nav>
+    <div class="nav-right">
+      <a href="https://lweb.ch" class="btn-ghost nav-web" style="font-weight:700;color:var(--accent-dark);font-size:14px;">Webseiten → lweb.ch</a>
+      <a href="index.html#kontakt" class="btn btn-primary nav-cta">Erstgespräch</a>
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<!--MNAV--><div class="mnav" id="mnav" aria-hidden="true">
+<svg class="mnav-bg" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+ <defs>
+  <linearGradient id="mB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#fff3f4"/></linearGradient>
+  <radialGradient id="mG1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fe6c75" stop-opacity=".26"/><stop offset="1" stop-color="#fe6c75" stop-opacity="0"/></radialGradient>
+  <radialGradient id="mG2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5ccfff" stop-opacity=".30"/><stop offset="1" stop-color="#5ccfff" stop-opacity="0"/></radialGradient>
+  <pattern id="mD" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#1c2a39" opacity=".07"/></pattern>
+  <filter id="mSh" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1c2a39" flood-opacity=".16"/></filter>
+ </defs>
+ <rect width="400" height="800" fill="url(#mB)"/><rect width="400" height="800" fill="url(#mD)"/>
+ <circle cx="370" cy="70" r="200" fill="url(#mG1)"/><circle cx="20" cy="740" r="210" fill="url(#mG2)"/>
+ <g fill="none" stroke="#b9d0e7" stroke-width="1.3" stroke-dasharray="3 8" stroke-linecap="round"><circle cx="400" cy="120" r="150"/><circle cx="0" cy="700" r="170"/></g>
+ <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -12;0 0" dur="6s" repeatCount="indefinite"/>
+  <g transform="translate(346 236) rotate(12)" filter="url(#mSh)"><rect width="56" height="56" rx="17" fill="#fff"/><use href="#ic-bell" x="14" y="14" width="28" height="28" fill="none" stroke="#fe6c75" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+ <g><animateTransform attributeName="transform" type="translate" values="0 0;0 10;0 0" dur="7s" repeatCount="indefinite"/>
+  <g transform="translate(-22 560) rotate(-10)" filter="url(#mSh)"><rect width="56" height="56" rx="17" fill="#fff"/><use href="#ic-chart" x="14" y="14" width="28" height="28" fill="none" stroke="#3aa0ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+ <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 0" dur="5.4s" repeatCount="indefinite"/>
+  <g transform="translate(350 640) rotate(8)" filter="url(#mSh)"><rect width="56" height="56" rx="17" fill="#1c2a39"/><use href="#ic-code" x="14" y="14" width="28" height="28" fill="none" stroke="#fe6c75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+ <g fill="#fe6c75"><path d="M60 150l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"><animate attributeName="opacity" values=".2;1;.2" dur="3.4s" repeatCount="indefinite"/></path></g>
+ <g fill="#5ccfff"><path d="M330 520l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z"><animate attributeName="opacity" values="1;.2;1" dur="3s" repeatCount="indefinite"/></path></g>
+ <g fill="#ffb703"><circle cx="40" cy="430" r="4"><animate attributeName="opacity" values=".3;1;.3" dur="2.6s" repeatCount="indefinite"/></circle><circle cx="372" cy="380" r="3.5" fill="#0a9b7c"><animate attributeName="opacity" values="1;.3;1" dur="3.2s" repeatCount="indefinite"/></circle></g>
+</svg>
+<nav class="mnav-in" aria-label="Mobile Navigation">
+ <span class="mnav-kicker m-in" style="--i:-1">Menü</span>
+ <ul class="mnav-list"><li class="m-in" style="--i:0"><a href="index.html#fuerwen"><span class="mi" style="background:#fe6c75"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-users"/></svg></span><span class="mt">Für wen<small>Für welche Betriebe</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:1"><a href="index.html#projekte"><span class="mi" style="background:#3aa0ff"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg></span><span class="mt">Projekte<small>6 Apps im Einsatz</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:2"><a href="index.html#faehigkeiten"><span class="mi" style="background:#8a63d2"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-spark"/></svg></span><span class="mt">Fähigkeiten<small>Was Ihre App kann</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:3"><a href="index.html#ablauf"><span class="mi" style="background:#0a9b7c"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-rocket"/></svg></span><span class="mt">Ablauf<small>In 5 Schritten zur App</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:4"><a href="index.html#preise"><span class="mi" style="background:#f4a261"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tag"/></svg></span><span class="mt">Preise<small>Ab 3.500 CHF</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li><li class="m-in" style="--i:5"><a href="index.html#faq"><span class="mi" style="background:#1c2a39"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg></span><span class="mt">FAQ<small>Häufige Fragen</small></span><span class="ma"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></span></a></li></ul>
+ <a class="btn btn-primary mnav-cta m-in" style="--i:6" href="index.html#kontakt">Kostenloses Erstgespräch</a>
+ <div class="mnav-contact m-in" style="--i:7"><a href="mailto:info@lweb.ch"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-mail"/></svg> info@lweb.ch</a><a href="tel:+41765608645"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tel"/></svg> +41 76 560 86 45</a></div>
+ <div class="mnav-store m-in" style="--i:8"><img src="img/app-store-badge.webp" alt="Download on the App Store"><img src="img/google-play.png" alt="Get it on Google Play"></div>
+</nav>
+</div><!--/MNAV-->
+<main>
+ <section class="legal-hero"><div class="wrap">
+  <span class="eyebrow">Rechtliches</span>
+  <h1>Allgemeine Geschäftsbedingungen</h1>
+  <p>Die Bedingungen für Aufträge im Bereich App-Entwicklung.</p>
+  <div class="legal-tabs"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutzerklärung</a><a href="agb.html" class="on">Allgemeine Geschäftsbedingungen</a></div>
+ </div></section>
+ <section class="legal-wrap"><div class="wrap">
+  <article class="legal-card">
+   <h4>1. Geltungsbereich</h4><p>Diese AGB gelten für alle Dienstleistungen von Lweb — Salvador Lopez, 9475 Sevelen, Schweiz (UID: CHE-449.145.794), im Bereich App-Entwicklung, Webentwicklung und KI-Lösungen.</p><h4>2. Angebote & Vertragsschluss</h4><p>Alle Angebote sind freibleibend. Ein Vertrag kommt erst durch schriftliche Auftragsbestätigung (auch per E-Mail) zustande. Der Preiskalkulator auf der Website dient als unverbindliche Schätzung.</p><h4>3. Leistungen</h4><p>Der Umfang der Leistungen ergibt sich aus der jeweiligen Auftragsbestätigung. Änderungen oder Zusatzleistungen werden gesondert vereinbart und berechnet.</p><h4>4. Preise & Zahlung</h4><p>Alle Preise verstehen sich in Schweizer Franken (CHF) und sind Endpreise (kein MwSt-Ausweis bei Einzelunternehmen unter CHF 100'000 Umsatz). Die Zahlung erfolgt gemäss Vereinbarung, in der Regel 50% bei Auftragserteilung und 50% bei Projektabschluss.</p><h4>5. Lieferfristen</h4><p>Liefertermine werden individuell vereinbart. Verzögerungen durch unvorhergesehene Umstände oder fehlende Zulieferungen des Kunden verlängern die Lieferfrist entsprechend.</p><h4>6. Mitwirkungspflicht</h4><p>Der Kunde stellt alle erforderlichen Inhalte (Texte, Bilder, Logos, Zugänge) rechtzeitig zur Verfügung. Verzögerungen durch fehlende Zulieferungen gehen nicht zu Lasten von Lweb.</p><h4>7. Urheberrecht & Nutzungsrechte</h4><p>Nach vollständiger Bezahlung gehen die Nutzungsrechte am erstellten Werk auf den Kunden über. Lweb behält das Recht, das Projekt als Referenz in seinem Portfolio zu zeigen.</p><h4>8. Gewährleistung</h4><p>Lweb gewährleistet, dass die gelieferten Arbeiten frei von wesentlichen Fehlern sind. Mängel werden innerhalb von 30 Tagen nach Abnahme kostenlos behoben.</p><h4>9. Haftung</h4><p>Die Haftung von Lweb ist auf den jeweiligen Auftragswert beschränkt. Ausgeschlossen sind Schäden durch höhere Gewalt, Fehler Dritter oder unsachgemässe Nutzung.</p><h4>10. Anwendbares Recht & Gerichtsstand</h4><p>Es gilt Schweizer Recht. Gerichtsstand ist Buchs SG, Schweiz.</p>
+   <div class="legal-meta">Lweb – Salvador Lopez · Chalberweidstrasse 38 · 9475 Sevelen · UID CHE-449.145.794</div>
+  </article>
+  <a class="legal-back" href="index.html">← Zurück zur Startseite</a>
+ </div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">Lweb<small><svg width="12" height="12" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#d52b1e"/><rect x="6" y="13" width="20" height="6" rx="1" fill="#fff"/><rect x="13" y="6" width="6" height="20" rx="1" fill="#fff"/></svg>Salvador Lopez</small></a>
+        <p style="font-size:14px;max-width:260px;margin-top:14px;">Apps für Schweizer KMU – direkt vom Entwickler aus Sevelen SG.</p>
+      </div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html#fuerwen">Für wen</a></li><li><a href="index.html#projekte">Projekte</a></li><li><a href="index.html#faehigkeiten">Fähigkeiten</a></li><li><a href="index.html#ablauf">Ablauf</a></li><li><a href="index.html#preise">Preise</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Apps</h4><ul><li><a href="https://apps.apple.com/app/id6745336262">Work Time</a></li><li><a href="https://hofchoerbli.ch">Hofchörbli</a></li><li><a href="https://menu-calculate.com">Menu Calculate</a></li><li><a href="index.html#projekte">Alle Projekte</a></li></ul></div>
+      <div class="footer-col"><h4>Kontakt</h4><ul><li><a href="mailto:info@lweb.ch">info@lweb.ch</a></li><li><a href="tel:+41765608645">+41 76 560 86 45</a></li><li><a href="https://lweb.ch">Webseiten (lweb.ch)</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Lweb – Salvador Lopez · Chalberweidstrasse 38 · 9475 Sevelen · UID CHE-449.145.794</span>
+      <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+var b=document.getElementById('burger'),m=document.getElementById('mnav');
+function setMenu(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schliessen':'Menü öffnen');m.setAttribute('aria-hidden',!o);document.body.classList.toggle('menu-open',o)}
+b.addEventListener('click',function(){setMenu(!m.classList.contains('open'))});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+window.addEventListener('resize',function(){if(window.innerWidth>960)setMenu(false)});
+</script>
+</body>
+</html>

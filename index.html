@@ -149,7 +149,7 @@
  ]
 }
 </script>
-<!--FROMLWEB--><script>(function(){try{var h='',r=document.referrer,st=window.sessionStorage;if(r){try{h=new URL(r).hostname}catch(e){}}var self=location.hostname,ok=/(^|\.)lweb\.ch$/.test(h);if(/[?&]from=lweb(&|$)/.test(location.search)||ok){st.setItem('fromLweb','1')}else if(h&&h!==self){st.removeItem('fromLweb')}if(st.getItem('fromLweb')==='1')document.documentElement.classList.add('from-lweb')}catch(e){}})();</script><!--/FROMLWEB--><!--VA--><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+<!--FROMLWEB--><script>document.documentElement.classList.add('js');(function(){try{var h='',r=document.referrer,st=window.sessionStorage;if(r){try{h=new URL(r).hostname}catch(e){}}var self=location.hostname,ok=/(^|\.)lweb\.ch$/.test(h);if(/[?&]from=lweb(&|$)/.test(location.search)||ok){st.setItem('fromLweb','1')}else if(h&&h!==self){st.removeItem('fromLweb')}if(st.getItem('fromLweb')==='1')document.documentElement.classList.add('from-lweb')}catch(e){}})();</script><!--/FROMLWEB--><!--VA--><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script><!--/VA--><style>
   :root{
     --bg:#ffffff;
@@ -599,7 +599,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 @media(max-width:1100px){.ext-grid.six{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:960px){.ext-grid.six{grid-template-columns:repeat(3,1fr)}.steps-grid.five{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.ext-grid.six{grid-template-columns:repeat(2,1fr)}.steps-grid.five{grid-template-columns:1fr}.ext-card{padding:16px 10px}}
-html,body{overflow-x:hidden}
+html,body{overflow-x:clip}
 @media(max-width:960px){
  .wrap{padding-left:14px;padding-right:14px}
  .wrap.nav{padding:10px 16px}
@@ -620,6 +620,19 @@ html,body{overflow-x:hidden}
  .proj-panel .shot:nth-child(2){margin-left:-5%}
 }
 button,input,textarea,.btn{font-family:inherit}
+.nav-links a{position:relative}
+.nav-links a.is-active::after{content:'';position:absolute;left:4px;right:4px;bottom:-7px;height:3px;border-radius:3px;background:var(--accent)}
+.pagefade{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0;background:#fff;transition:opacity 230ms cubic-bezier(.4,0,.2,1)}
+.pagefade.is-on{opacity:1;transition-duration:190ms}
+@media(prefers-reduced-motion:reduce){.pagefade{display:none}}
+/* ===== Scroll-Reveal ===== */
+.js .rv{opacity:0;transform:translate3d(0,34px,0);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);transition-delay:var(--d,0ms);will-change:opacity,transform}
+.js .rv.rv-l{transform:translate3d(-40px,0,0)}
+.js .rv.rv-r{transform:translate3d(40px,0,0)}
+.js .rv.rv-s{transform:scale(.94) translate3d(0,20px,0)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.in.tl-dot{transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv,.js .rv.rv-l,.js .rv.rv-r,.js .rv.rv-s{opacity:1;transform:none;transition:none}}
 .tl-wrap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
 .tl-wrap::before{content:"";position:absolute;left:12.5%;right:12.5%;top:33px;height:4px;border-radius:4px;background:#31bcf6;opacity:.28}
 .tl{position:relative;display:flex;flex-direction:column;align-items:center}
@@ -683,19 +696,22 @@ button,input,textarea,.btn{font-family:inherit}
 .pc-btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
 .pc-btn2{display:flex;align-items:center;justify-content:center;min-height:58px;border-radius:999px;border:1.5px solid var(--navy);color:var(--navy);font-weight:700;font-size:17px;transition:background .2s ease}
 .pc-btn2:hover{background:#f3f7fb}
-.pb{position:relative;overflow:hidden;margin-top:22px;border-radius:30px;min-height:380px;display:grid;grid-template-columns:1fr 1fr;align-items:center;
+.pb{position:relative;overflow:hidden;margin-top:22px;border-radius:30px;min-height:470px;display:grid;grid-template-columns:1fr 1fr;align-items:center;
  background:radial-gradient(at 6% 12%,#7c98e6 0%,transparent 55%),radial-gradient(at 60% 30%,#a5c6f5 0%,transparent 60%),radial-gradient(at 96% 14%,#b3d9fb 0%,transparent 50%),radial-gradient(at 78% 100%,#98c0f2 0%,transparent 55%),linear-gradient(100deg,#86a3ea 0%,#9dbcf1 48%,#a9d3f8 100%)}
 .pb-text{position:relative;z-index:2;padding:48px 24px 48px 52px;color:#fff}
 .pb-text h3{font-size:clamp(30px,3.3vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.12;color:#fff;margin:0 0 16px;max-width:520px}
 .pb-text p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.92);margin:0;max-width:470px}
-.pb-art{position:absolute;right:56px;top:34px;width:440px;height:520px;z-index:1}
+.pb-art{position:absolute;right:56px;top:26px;width:400px;height:472px;z-index:1}
 .pb-art svg{width:100%;height:100%;display:block;overflow:visible;font-family:'Plus Jakarta Sans',Arial,sans-serif}
 .pb-bell{transform-box:fill-box;transform-origin:50% 12%;animation:pbRing 3.2s ease-in-out infinite}
 @keyframes pbRing{0%,60%,100%{transform:rotate(0)}66%{transform:rotate(-14deg)}72%{transform:rotate(12deg)}78%{transform:rotate(-8deg)}84%{transform:rotate(5deg)}90%{transform:rotate(0)}}
 @media(prefers-reduced-motion:reduce){.pb-bell{animation:none}}
 @media(max-width:1100px){.fx-top,.fx-grid,.pc-grid{grid-template-columns:1fr 1fr}.fx-top .fx-big:nth-child(3){grid-column:1/-1}.pc-grid .pc:nth-child(3){grid-column:1/-1}}
 @media(max-width:960px){
- .uc-grid{grid-template-columns:1fr;gap:16px}.uc{padding:14px 14px 22px;border-radius:24px}.uc-banner{height:225px}.uc-ic{width:180px;height:180px;left:-14px;bottom:-24px}.uc-ph.a{left:40%;width:132px;top:30px}.uc-ph.b{left:calc(40% + 96px);width:132px;top:10px}.uc h3{font-size:23px;margin-top:18px}.uc p{font-size:15px}
+ .uc-grid{grid-template-columns:1fr;gap:34px;align-items:start}
+ .uc{position:sticky;top:92px;box-shadow:0 -10px 40px -18px rgba(28,42,57,.35),0 24px 50px -30px rgba(28,42,57,.45)}
+ .uc:nth-child(1){z-index:1}.uc:nth-child(2){z-index:2}.uc:nth-child(3){z-index:3}.uc:nth-child(4){z-index:4}
+ .uc:hover{transform:none}.uc{padding:14px 14px 22px;border-radius:24px}.uc-banner{height:225px}.uc-ic{width:180px;height:180px;left:-14px;bottom:-24px}.uc-ph.a{left:40%;width:132px;top:30px}.uc-ph.b{left:calc(40% + 96px);width:132px;top:10px}.uc h3{font-size:23px;margin-top:18px}.uc p{font-size:15px}
  .fx-top,.fx-grid,.pc-grid{grid-template-columns:1fr}.fx-top .fx-big:nth-child(3),.pc-grid .pc:nth-child(3){grid-column:auto}
  .fx-big{min-height:0;padding:26px 22px}.fx-tile{margin-bottom:22px}.fx-sm{padding:16px}
  .pb{grid-template-columns:1fr;min-height:0;border-radius:26px;padding-bottom:310px}
@@ -709,7 +725,7 @@ button,input,textarea,.btn{font-family:inherit}
 }
 .form-note{margin:2px 0 0;font-size:13px;line-height:1.5;color:#6b7d99}.form-note a{color:var(--accent-dark);font-weight:700}
 header{border-bottom:0!important}
-@media(max-width:960px){.hero-grid>.mock-wrap{order:-1}.hero .hero-art{max-width:330px}.hero{padding-top:10px!important}.hero-grid{gap:14px!important}}
+@media(max-width:960px){.hero-grid>.mock-wrap{order:-1}.hero .hero-art{max-width:520px;width:calc(100% + 20px);margin-left:-10px;margin-right:-10px}.hero{padding-top:10px!important}.hero-grid{gap:14px!important}}
 .nav-left{display:flex;align-items:center;gap:14px}
 .back-chip{display:none;align-items:center;gap:6px;padding:7px 13px 7px 9px;border-radius:999px;background:#fff;border:1.5px solid #e3e7ee;font-size:13px;font-weight:700;color:var(--navy);white-space:nowrap;box-shadow:0 8px 18px -12px rgba(28,42,57,.45);transition:transform .2s,border-color .2s,color .2s}
 .back-chip svg.i{font-size:15px;color:var(--accent)}
@@ -1095,7 +1111,7 @@ header{border-bottom:0!important}
       <div class="section-head">
         <span class="eyebrow">Wie ich arbeite</span>
         <h2>Von der Idee bis in den App Store</h2>
-        <p>Fünf klare Schritte, ohne Überraschungen – Sie sehen laufend, wie Ihre App entsteht.</p>
+        <p>Vier klare Schritte, ohne Überraschungen – Sie sehen laufend, wie Ihre App entsteht.</p>
       </div>
       <ol class="tl-wrap"><li class="tl"><div class="tl-dot" style="background:linear-gradient(135deg,#31bcf6,#5ccfff)"><b>1</b></div><div class="tl-card"><h3>Kostenloses Erstgespräch</h3><p>Wir besprechen Ihre Idee, Ihren Betrieb und was die App wirklich leisten muss.</p></div></li><li class="tl"><div class="tl-dot" style="background:linear-gradient(135deg,#31bcf6,#5ccfff)"><b>2</b></div><div class="tl-card"><h3>Konzept &amp; fester Preis</h3><p>Sie erhalten ein klares Konzept und einen Fixpreis – keine Überraschungen später.</p></div></li><li class="tl"><div class="tl-dot" style="background:linear-gradient(135deg,#31bcf6,#5ccfff)"><b>3</b></div><div class="tl-card"><h3>Entwicklung &amp; Prototyp zum Ausprobieren</h3><p>Sie testen die App schon während der Entwicklung selbst auf Ihrem Handy (TestFlight) und sehen wöchentlich den Fortschritt.</p></div></li><li class="tl"><div class="tl-dot" style="background:linear-gradient(135deg,#31bcf6,#5ccfff)"><b>4</b></div><div class="tl-card"><h3>Veröffentlichung &amp; Betreuung</h3><p>Ich reiche die App bei App Store und Google Play ein und begleite Sie danach weiter.</p></div></li></ol>
     </div>
@@ -1108,11 +1124,11 @@ header{border-bottom:0!important}
         <h2>Alles, was Ihre App können soll</h2>
         <p>Vom Login bis zur Apple Watch – die wichtigsten Bausteine auf einen Blick.</p>
       </div>
-      <div class="fx-wrap"><div class="fx-top"><article class="fx-big" style="background:linear-gradient(135deg,#7d8bf8 0%,#b45cf0 100%)"><span class="fx-tile" style="color:#8a63d2"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bell"/></svg></span><h3>Push-Benachrichtigungen</h3><p>Nachrichten direkt aufs Handy: Neuigkeiten, Angebote und Erinnerungen an Ihre Nutzer.</p><span class="fx-tag">iOS · Android</span></article><article class="fx-big" style="background:linear-gradient(135deg,#17566e 0%,#1d6b83 100%)"><span class="fx-tile" style="color:#0f7a92"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-spark"/></svg></span><h3>KI (OpenAI: Sprache, Fotos, Text)</h3><p>Spracheingabe, Bilderkennung und intelligente Vorschläge direkt in Ihrer App.</p><span class="fx-tag">OpenAI</span></article><article class="fx-big" style="background:linear-gradient(135deg,#2c3583 0%,#3a469a 100%)"><span class="fx-tile" style="color:#3d4bb8"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-watch"/></svg></span><h3>Apple Watch</h3><p>Ihre App am Handgelenk: Kurzinfos und Aktionen, ohne das Handy zu zücken.</p><span class="fx-tag">watchOS</span></article></div></div>
+      <div class="fx-wrap"><div class="fx-top"><article class="fx-big" style="background:linear-gradient(135deg,#7d8bf8 0%,#b45cf0 100%)"><span class="fx-tile" style="color:#8a63d2"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-widget"/></svg></span><h3>Native Widgets</h3><p>Homescreen-Widgets und Live Activities: Wichtiges auf einen Blick, direkt auf dem Startbildschirm.</p><span class="fx-tag">iOS</span></article><article class="fx-big" style="background:linear-gradient(135deg,#17566e 0%,#1d6b83 100%)"><span class="fx-tile" style="color:#0f7a92"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-spark"/></svg></span><h3>KI (OpenAI: Sprache, Fotos, Text)</h3><p>Spracheingabe, Bilderkennung und intelligente Vorschläge direkt in Ihrer App.</p><span class="fx-tag">OpenAI</span></article><article class="fx-big" style="background:linear-gradient(135deg,#2c3583 0%,#3a469a 100%)"><span class="fx-tile" style="color:#3d4bb8"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-watch"/></svg></span><h3>Apple Watch</h3><p>Ihre App am Handgelenk: Kurzinfos und Aktionen, ohne das Handy zu zücken.</p><span class="fx-tag">watchOS</span></article></div></div>
 <div class="pb">
  <div class="pb-text">
-  <h3>Widgets &amp; Live Activities: Ihre App immer im Blick</h3>
-  <p>Wichtiges direkt auf dem Startbildschirm und live auf dem Sperrbildschirm – ohne die App zu öffnen.</p>
+  <h3>Push-Nachrichten, die wirklich ankommen</h3>
+  <p>Halten Sie Ihre Nutzer auf dem Laufenden – mit Neuigkeiten, Angeboten und Erinnerungen direkt aufs Handy.</p>
  </div>
  <div class="pb-art" aria-hidden="true">
  <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg">
@@ -1128,18 +1144,18 @@ header{border-bottom:0!important}
   <text x="232" y="232" text-anchor="middle" font-size="80" font-weight="800" fill="rgba(255,255,255,.62)" letter-spacing="-2">09:41</text>
   <g filter="url(#pbSh)"><rect x="30" y="278" width="382" height="104" rx="28" fill="rgba(255,255,255,.66)"/></g>
   <image href="img/worktime-icon.webp" x="40" y="298" width="52" height="52" clip-path="url(#pbC1)"/>
-  <text x="106" y="314" font-size="17" font-weight="800" fill="#1c2a39">Work Time · läuft</text>
-  <text x="392" y="314" text-anchor="end" font-size="14" font-weight="600" fill="#5a6a82">Live</text>
-  <text x="106" y="342" font-size="26" font-weight="800" fill="#1c2a39">05:42:10</text>
-  <rect x="106" y="352" width="270" height="8" rx="4" fill="rgba(28,42,57,.15)"/><rect x="106" y="352" width="180" height="8" rx="4" fill="#31bcf6"/>
+  <text x="106" y="314" font-size="17" font-weight="800" fill="#1c2a39">Work Time</text>
+  <text x="392" y="314" text-anchor="end" font-size="14" font-weight="600" fill="#5a6a82">jetzt</text>
+  <text x="106" y="338" font-size="16" font-weight="500" fill="#1c2a39">Arbeitstag erfasst:</text>
+  <text x="106" y="360" font-size="16" font-weight="500" fill="#1c2a39">8 h 00 min – gut gemacht!</text>
   <rect x="46" y="398" width="350" height="110" rx="26" fill="rgba(255,255,255,.5)"/>
   <image href="img/hofchoerbli-icon.webp" x="58" y="414" width="46" height="46" clip-path="url(#pbC2)"/>
-  <text x="118" y="431" font-size="16" font-weight="800" fill="#1c2a39">Widget · Hofchörbli</text>
-  <text x="384" y="431" text-anchor="end" font-size="13" font-weight="600" fill="#5a6a82">Heute</text>
-  <text x="118" y="455" font-size="15" font-weight="500" fill="#1c2a39">3 Hofläden in Ihrer Nähe</text>
+  <text x="118" y="431" font-size="16" font-weight="800" fill="#1c2a39">Hofchörbli</text>
+  <text x="384" y="431" text-anchor="end" font-size="13" font-weight="600" fill="#5a6a82">vor 3 Std.</text>
+  <text x="118" y="455" font-size="15" font-weight="500" fill="#1c2a39">Neuer Hofladen in Ihrer Nähe!</text>
   <g stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"><path d="M10 168l32 22"/><path d="M52 148l8 30"/><path d="M-6 214l30 8"/></g>
   <g class="pb-bell" filter="url(#pbGlow)"><circle cx="58" cy="248" r="46" fill="#ff6f61"/>
-   <g transform="translate(58 248) scale(2.1) translate(-12 -12)" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l2.5 1.5M9.5 3h5"/></g>
+   <g transform="translate(58 248) scale(2.1) translate(-12 -12)" fill="#fff"><path d="M12 3a1 1 0 011 1v.6A6 6 0 0118 10.5v3.2l1.4 2.5a1 1 0 01-.9 1.5H5.5a1 1 0 01-.9-1.5L6 13.7v-3.2A6 6 0 0111 4.6V4a1 1 0 011-1z"/><path d="M9.8 19a2.3 2.3 0 004.4 0z"/></g>
   </g>
  </svg>
  </div>
@@ -1259,6 +1275,67 @@ if(cf){cf.addEventListener('submit',function(e){
   window.location.href=buildMailto(v('name'),v('email'),v('phone'),v('idea'));
   var n=document.getElementById('formNote');if(n)n.hidden=false;
 })}
+
+
+(function(){
+ var hd=document.querySelector('header');
+ var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var veil=null;
+ function off(){return (hd?hd.offsetHeight:80)+8}
+ function jump(y){var r=document.documentElement,p=r.style.scrollBehavior;r.style.scrollBehavior='auto';window.scrollTo(0,y);r.style.scrollBehavior=p}
+ var links=[].slice.call(document.querySelectorAll('.nav-links a[href^="#"]')).map(function(l){var t=null;try{t=document.querySelector(l.getAttribute('href'))}catch(x){}return {l:l,t:t}}).filter(function(w){return w.t});
+ function upd(){
+  var pos=window.pageYOffset+off()+40,cur=null;
+  links.forEach(function(w){if(w.t.getBoundingClientRect().top+window.pageYOffset<=pos)cur=w});
+  if(window.innerHeight+window.pageYOffset>=document.documentElement.scrollHeight-2&&links.length)cur=links[links.length-1];
+  links.forEach(function(w){w.l.classList.remove('is-active')});
+  if(cur)cur.l.classList.add('is-active');
+ }
+ function fade(y){
+  if(reduce){jump(y);upd();return}
+  if(!veil){veil=document.createElement('div');veil.className='pagefade';document.body.appendChild(veil)}
+  veil.classList.add('is-on');
+  setTimeout(function(){jump(y);upd();requestAnimationFrame(function(){veil.classList.remove('is-on')})},200);
+ }
+ document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;
+  var id=a.getAttribute('href');if(!id||id.length<2)return;
+  var t=null;try{t=document.querySelector(id)}catch(x){}
+  if(!t)return;
+  e.preventDefault();
+  var y=t.getBoundingClientRect().top+window.pageYOffset-off();
+  fade(y);
+  try{history.replaceState(null,'',id)}catch(x){}
+ });
+ var tick=false;
+ window.addEventListener('scroll',function(){if(tick)return;tick=true;requestAnimationFrame(function(){upd();tick=false})},{passive:true});
+ window.addEventListener('resize',upd,{passive:true});
+ upd();
+})();
+
+
+(function(){
+ if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.remove('js');return}
+ var groups=[
+  ['.section-head',null],['.hero-art',null],['.legal-card',null],
+  ['.compare-card.bad','rv-l'],['.compare-card.good','rv-r'],['.compare-vs','rv-s'],
+  ['.platform-card',null],['.ai-section','rv-s'],['.uc',window.innerWidth>960?null:'skip'],['.proj-text','rv-l'],['.proj-panel','rv-r'],
+  ['.fx-big',null],['.pb','rv-s'],['.tl',null],['.pc',null],['.about-img','rv-l'],['.feature-split > div:last-child',null],
+  ['.stat-tile',null],['.store-row',null],['.faq-item',null],['.faq > div:last-child details',null],['.contact','rv-s'],['.final-cta','rv-s']
+ ];
+ var els=[];
+ groups.forEach(function(g){
+  document.querySelectorAll(g[0]).forEach(function(el,i){
+   if(el.closest('.mnav')||el.classList.contains('rv')||g[1]==='skip')return;
+   el.classList.add('rv');if(g[1])el.classList.add(g[1]);
+   var sib=el.parentElement?Array.prototype.indexOf.call(el.parentElement.children,el):0;
+   el.style.setProperty('--d',(Math.min(sib,5)*90)+'ms');
+   els.push(el);
+  });
+ });
+ var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+ els.forEach(function(el){io.observe(el)});
+})();
 
 var b=document.getElementById('burger'),m=document.getElementById('mnav');
 function setMenu(o){var d=document.body;if(o===m.classList.contains('open'))return;if(o){var y=window.pageYOffset||0;d.setAttribute('data-sy',y);d.style.top=(-y)+'px'}m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Menü schliessen':'Menü öffnen');m.setAttribute('aria-hidden',!o);d.classList.toggle('menu-open',o);if(!o){var y2=parseInt(d.getAttribute('data-sy')||'0',10);d.style.top='';d.removeAttribute('data-sy');window.scrollTo(0,y2)}}

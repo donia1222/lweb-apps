@@ -620,6 +620,93 @@ html,body{overflow-x:hidden}
  .proj-panel .shot:nth-child(2){margin-left:-5%}
 }
 button,input,textarea,.btn{font-family:inherit}
+.tl-wrap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.tl-wrap::before{content:"";position:absolute;left:12.5%;right:12.5%;top:33px;height:4px;border-radius:4px;background:#31bcf6;opacity:.28}
+.tl{position:relative;display:flex;flex-direction:column;align-items:center}
+.tl-dot{position:relative;z-index:1;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 0 0 8px #fff,0 16px 30px -12px rgba(28,42,57,.45)}
+.tl-dot b{font-size:26px;font-weight:800}
+.tl-card{margin-top:-34px;padding-top:56px;width:100%;flex:1;background:#fff;border:1px solid #eef0f4;border-radius:24px;padding-left:20px;padding-right:20px;padding-bottom:24px;box-shadow:0 24px 50px -36px rgba(28,42,57,.45);text-align:center;transition:transform .25s ease,box-shadow .25s ease}
+.tl:hover .tl-card{transform:translateY(-5px);box-shadow:0 30px 60px -34px rgba(28,42,57,.55)}
+.tl-card h3{font-size:17px;font-weight:800;line-height:1.25;color:var(--navy);margin:0 0 8px}
+.tl-card p{font-size:14px;line-height:1.55;color:var(--text-soft);margin:0}
+@media(max-width:960px){
+ .tl-wrap{grid-template-columns:1fr;gap:16px;padding-left:0}
+ .tl-wrap::before{left:33px;right:auto;top:20px;bottom:20px;width:4px;height:auto;background:#31bcf6;opacity:.28}
+ .tl{flex-direction:row;align-items:flex-start;gap:14px}
+ .tl-dot{flex:none;width:52px;height:52px;margin-left:8px;box-shadow:0 0 0 6px #fff,0 12px 24px -12px rgba(28,42,57,.45)}
+ .tl-dot b{font-size:21px}
+ .tl-card{margin-top:0;padding:18px 18px 20px;text-align:left;border-radius:20px}
+}
+.uc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.uc{background:#fff;border:1px solid #eef0f4;border-radius:26px;padding:22px 22px 26px;box-shadow:0 24px 50px -34px rgba(28,42,57,.4);transition:transform .25s ease,box-shadow .25s ease}
+.uc:hover{transform:translateY(-4px);box-shadow:0 30px 60px -32px rgba(28,42,57,.5)}
+.uc-banner{position:relative;height:250px;border-radius:20px;overflow:hidden}
+.uc-ic{position:absolute;left:-16px;bottom:-30px;width:215px;height:215px}
+.uc-ph{position:absolute;height:auto;display:block;background:#fff;border:4px solid #fff;border-bottom:0;border-radius:22px 22px 0 0;box-shadow:0 18px 40px -14px rgba(28,42,57,.5)}
+.uc-ph.a{left:43%;top:34px;width:150px;z-index:2}
+.uc-ph.b{left:calc(43% + 112px);top:12px;width:150px;z-index:1}
+.uc h3{font-size:28px;font-weight:800;letter-spacing:-.02em;color:var(--navy);margin:22px 0 8px}
+.uc p{color:var(--text-soft);font-size:15.5px;line-height:1.6;margin:0 0 14px;max-width:520px}
+.uc-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14.5px;color:var(--accent-dark)}
+.uc-link svg{transition:transform .2s ease}.uc:hover .uc-link svg{transform:translateX(3px)}
+.fx-top{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+.fx-big{border-radius:24px;padding:34px;color:#fff;min-height:290px;display:flex;flex-direction:column}
+.fx-tile{width:60px;height:60px;border-radius:16px;background:#fff;display:grid;place-items:center;font-size:30px;margin-bottom:34px;box-shadow:0 10px 24px -12px rgba(0,0,0,.35)}
+.fx-big h3{font-size:24px;font-weight:800;letter-spacing:-.01em;color:#fff;margin:0 0 10px;line-height:1.2}
+.fx-big p{color:rgba(255,255,255,.9);font-size:16px;line-height:1.5;margin:0 0 20px}
+.fx-tag{margin-top:auto;font-size:14px;font-weight:600;color:rgba(255,255,255,.92)}
+.fx-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fx-sm{background:#fff;border-radius:20px;padding:20px 22px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;border:1px solid #eef0f4;transition:transform .2s ease,box-shadow .2s ease}
+.fx-sm:hover{transform:translateY(-3px);box-shadow:0 20px 40px -28px rgba(28,42,57,.45)}
+.fx-ico{width:56px;height:56px;border-radius:15px;color:#fff;display:grid;place-items:center;font-size:28px}
+.fx-sm h3{font-size:17px;font-weight:800;color:var(--navy);margin:2px 0 6px;line-height:1.25}
+.fx-sm p{font-size:14px;color:var(--text-soft);line-height:1.5;margin:0 0 10px}
+.fx-tag2{font-size:12.5px;font-weight:700;color:var(--navy-soft)}
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;max-width:1180px;margin:0 auto}
+.pc{background:#fff;border-radius:34px;padding:38px 40px 34px;display:flex;flex-direction:column;box-shadow:0 30px 60px -36px rgba(28,110,170,.35)}
+.pc-lab{font-size:17px;font-weight:800;margin-bottom:8px}
+.pc h3{font-size:25px;font-weight:800;letter-spacing:-.02em;line-height:1.15;color:var(--navy);margin:0 0 10px}
+.pc-desc{font-size:16px;line-height:1.5;color:var(--navy);margin:0 0 20px}
+.pc-list{margin:0 0 26px;display:grid;gap:7px}
+.pc-list li{display:flex;gap:10px;align-items:center;font-size:15px;color:var(--navy-soft)}
+.pc-ck{display:flex;font-size:18px}
+.pc-ck svg.i{stroke-width:2.6}
+.pc-price{margin-top:auto;padding-top:18px}
+.pc-ab{display:block;font-weight:800;font-size:16px;color:var(--navy);min-height:24px}
+.pc-num{font-size:60px;font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.05}
+.pc-num.pc-big{font-size:44px;line-height:1.3}
+.pc-num small{font-size:16px;font-weight:800;letter-spacing:0;margin-left:6px}
+.pc-note{font-size:13.5px;color:#8a93a6;margin-top:2px}
+.pc-note2{font-size:13px;color:var(--navy-soft);line-height:1.4;margin:6px 0 22px;min-height:36px}
+.pc-btn{display:flex;align-items:center;justify-content:center;min-height:58px;border-radius:999px;color:var(--navy);font-weight:700;font-size:17px;margin-bottom:12px;transition:transform .2s ease,filter .2s ease}
+.pc:nth-child(3) .pc-btn{color:#fff}
+.pc-btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.pc-btn2{display:flex;align-items:center;justify-content:center;min-height:58px;border-radius:999px;border:1.5px solid var(--navy);color:var(--navy);font-weight:700;font-size:17px;transition:background .2s ease}
+.pc-btn2:hover{background:#f3f7fb}
+.pb{position:relative;overflow:hidden;margin-top:22px;border-radius:30px;min-height:380px;display:grid;grid-template-columns:1fr 1fr;align-items:center;
+ background:radial-gradient(at 6% 12%,#7c98e6 0%,transparent 55%),radial-gradient(at 60% 30%,#a5c6f5 0%,transparent 60%),radial-gradient(at 96% 14%,#b3d9fb 0%,transparent 50%),radial-gradient(at 78% 100%,#98c0f2 0%,transparent 55%),linear-gradient(100deg,#86a3ea 0%,#9dbcf1 48%,#a9d3f8 100%)}
+.pb-text{position:relative;z-index:2;padding:48px 24px 48px 52px;color:#fff}
+.pb-text h3{font-size:clamp(30px,3.3vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.12;color:#fff;margin:0 0 16px;max-width:520px}
+.pb-text p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.92);margin:0;max-width:470px}
+.pb-art{position:absolute;right:56px;top:34px;width:440px;height:520px;z-index:1}
+.pb-art svg{width:100%;height:100%;display:block;overflow:visible;font-family:'Plus Jakarta Sans',Arial,sans-serif}
+.pb-bell{transform-box:fill-box;transform-origin:50% 12%;animation:pbRing 3.2s ease-in-out infinite}
+@keyframes pbRing{0%,60%,100%{transform:rotate(0)}66%{transform:rotate(-14deg)}72%{transform:rotate(12deg)}78%{transform:rotate(-8deg)}84%{transform:rotate(5deg)}90%{transform:rotate(0)}}
+@media(prefers-reduced-motion:reduce){.pb-bell{animation:none}}
+@media(max-width:1100px){.fx-top,.fx-grid,.pc-grid{grid-template-columns:1fr 1fr}.fx-top .fx-big:nth-child(3){grid-column:1/-1}.pc-grid .pc:nth-child(3){grid-column:1/-1}}
+@media(max-width:960px){
+ .uc-grid{grid-template-columns:1fr;gap:16px}.uc{padding:14px 14px 22px;border-radius:24px}.uc-banner{height:225px}.uc-ic{width:180px;height:180px;left:-14px;bottom:-24px}.uc-ph.a{left:40%;width:132px;top:30px}.uc-ph.b{left:calc(40% + 96px);width:132px;top:10px}.uc h3{font-size:23px;margin-top:18px}.uc p{font-size:15px}
+ .fx-top,.fx-grid,.pc-grid{grid-template-columns:1fr}.fx-top .fx-big:nth-child(3),.pc-grid .pc:nth-child(3){grid-column:auto}
+ .fx-big{min-height:0;padding:26px 22px}.fx-tile{margin-bottom:22px}.fx-sm{padding:16px}
+ .pb{grid-template-columns:1fr;min-height:0;border-radius:26px;padding-bottom:310px}
+ .pb-text{padding:32px 22px 0}
+ .pb-text h3{font-size:28px}
+ .pb-art{right:auto;left:50%;top:auto;bottom:-190px;width:340px;height:400px;transform:translateX(-50%)}
+ .fx-grid,.fx-top .fx-big:nth-child(1),.fx-top .fx-big:nth-child(3){display:none}
+ .fx-top .fx-big:nth-child(2){grid-column:auto}
+ .fx-top{margin-bottom:0}
+ .pc{padding:28px 22px 24px;border-radius:28px}.pc-num{font-size:52px}.pc-num.pc-big{font-size:40px}
+}
 .form-note{margin:2px 0 0;font-size:13px;line-height:1.5;color:#6b7d99}.form-note a{color:var(--accent-dark);font-weight:700}
 header{border-bottom:0!important}
 @media(max-width:960px){.hero-grid>.mock-wrap{order:-1}.hero .hero-art{max-width:330px}.hero{padding-top:10px!important}.hero-grid{gap:14px!important}}
@@ -988,7 +1075,7 @@ header{border-bottom:0!important}
         <h2>Für welche Betriebe ich Apps baue</h2>
         <p>Ein Auszug – jede Branche hat andere Anforderungen, das Grundprinzip bleibt gleich: eine App, die Ihr Geschäft wirklich einfacher macht.</p>
       </div>
-      <div class="cards-grid three"><div class="usecase-card"><div class="usecase-ico" style="background:var(--panel-pink);"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-fork"/></svg></div><h4>Gastronomie</h4><p>Bestellungen, digitale Speisekarte, Treuepunkte – Beispiel: Menu Calculate für Foodcost und Rezeptkalkulation.</p><a href="#projekte">Beispiele ansehen →</a></div><div class="usecase-card"><div class="usecase-ico" style="background:var(--panel-purple);"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bag"/></svg></div><h4>Detailhandel &amp; Hofläden</h4><p>Produkte, Standorte und Öffnungszeiten auf der Karte – Beispiel: Hofchörbli mit über 650 Automaten.</p><a href="#projekte">Beispiele ansehen →</a></div><div class="usecase-card"><div class="usecase-ico" style="background:var(--panel-orange);"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wrench"/></svg></div><h4>Handwerk &amp; Service</h4><p>Termine, Aufträge und Arbeitszeit erfassen – Beispiel: Work Time mit Watch, Widgets und Live Activity.</p><a href="#projekte">Beispiele ansehen →</a></div><div class="usecase-card"><div class="usecase-ico" style="background:var(--panel-teal);"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-users"/></svg></div><h4>Vereine &amp; Gemeinden</h4><p>Mitglieder informieren, Anlässe organisieren, Mitteilungen per Push versenden.</p><a href="#projekte">Beispiele ansehen →</a></div><div class="usecase-card"><div class="usecase-ico" style="background:var(--panel-yellow);"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-rocket"/></svg></div><h4>Startups</h4><p>MVP schnell und sauber umsetzen, um eine Idee mit echten Nutzern zu testen.</p><a href="#projekte">Beispiele ansehen →</a></div><div class="usecase-card"><div class="usecase-ico" style="background:var(--panel-sky);"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-lock"/></svg></div><h4>Interne Firmen-Apps</h4><p>Zeiterfassung, Checklisten und interne Abläufe digitalisieren, ohne Lizenzkosten pro Nutzer.</p><a href="#projekte">Beispiele ansehen →</a></div></div>
+      <div class="uc-grid"><article class="uc"><div class="uc-banner" style="background:radial-gradient(at 18% 22%,#ff9a6b,transparent 58%),radial-gradient(at 86% 18%,#ffd166,transparent 55%),radial-gradient(at 60% 92%,#f0705a,transparent 60%),#f4a261"><svg class="uc-ic" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.42)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-fork"/></svg><img class="uc-ph a" src="img/menucalc-1.webp" alt="Gastronomie – App-Beispiel" width="150" loading="lazy"><img class="uc-ph b" src="img/menucalc-2.webp" alt="" width="150" loading="lazy"></div><h3>Gastronomie</h3><p>Bestellungen, digitale Speisekarte, Treuepunkte – Beispiel: Menu Calculate für Foodcost und Rezeptkalkulation.</p><a class="uc-link" href="#projekte">Beispiele ansehen <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></article><article class="uc"><div class="uc-banner" style="background:radial-gradient(at 18% 22%,#9be07a,transparent 58%),radial-gradient(at 86% 18%,#dff28b,transparent 55%),radial-gradient(at 60% 92%,#43b581,transparent 60%),#7dcc8e"><svg class="uc-ic" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.42)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-bag"/></svg><img class="uc-ph a" src="img/hofchoerbli-1.webp" alt="Detailhandel & Hofläden – App-Beispiel" width="150" loading="lazy"><img class="uc-ph b" src="img/hofchoerbli-2.webp" alt="" width="150" loading="lazy"></div><h3>Detailhandel &amp; Hofläden</h3><p>Produkte, Standorte und Öffnungszeiten auf der Karte – Beispiel: Hofchörbli mit über 650 Automaten.</p><a class="uc-link" href="#projekte">Beispiele ansehen <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></article><article class="uc"><div class="uc-banner" style="background:radial-gradient(at 18% 22%,#5ccfff,transparent 58%),radial-gradient(at 86% 18%,#8f9bff,transparent 55%),radial-gradient(at 60% 92%,#31bcf6,transparent 60%),#5aa9f0"><svg class="uc-ic" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.42)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-wrench"/></svg><img class="uc-ph a" src="img/worktime-1.webp" alt="Handwerk & Service – App-Beispiel" width="150" loading="lazy"><img class="uc-ph b" src="img/worktime-2.webp" alt="" width="150" loading="lazy"></div><h3>Handwerk &amp; Service</h3><p>Termine, Aufträge und Arbeitszeit erfassen – Beispiel: Work Time mit Watch, Widgets und Live Activity.</p><a class="uc-link" href="#projekte">Beispiele ansehen <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></article><article class="uc"><div class="uc-banner" style="background:radial-gradient(at 18% 22%,#c48bf0,transparent 58%),radial-gradient(at 86% 18%,#ff9ac1,transparent 55%),radial-gradient(at 60% 92%,#8f7bf0,transparent 60%),#b58af0"><svg class="uc-ic" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.42)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#ic-users"/></svg><img class="uc-ph a" src="img/hundezonen-1.webp" alt="Vereine & Gemeinden – App-Beispiel" width="150" loading="lazy"><img class="uc-ph b" src="img/hundezonen-2.webp" alt="" width="150" loading="lazy"></div><h3>Vereine &amp; Gemeinden</h3><p>Mitglieder informieren, Anlässe organisieren, Mitteilungen per Push versenden.</p><a class="uc-link" href="#projekte">Beispiele ansehen <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></article></div>
     </div>
   </section>
 
@@ -1010,7 +1097,7 @@ header{border-bottom:0!important}
         <h2>Von der Idee bis in den App Store</h2>
         <p>Fünf klare Schritte, ohne Überraschungen – Sie sehen laufend, wie Ihre App entsteht.</p>
       </div>
-      <div class="steps-grid five"><div class="step-card"><div class="step-num">1</div><h4 style="font-size:16px;">Kostenloses Erstgespräch</h4><p style="font-size:14px;">Wir besprechen Ihre Idee, Ihren Betrieb und was die App wirklich leisten muss.</p></div><div class="step-card"><div class="step-num">2</div><h4 style="font-size:16px;">Konzept &amp; fester Preis</h4><p style="font-size:14px;">Sie erhalten ein klares Konzept und einen Fixpreis – keine Überraschungen später.</p></div><div class="step-card"><div class="step-num">3</div><h4 style="font-size:16px;">Design &amp; Prototyp zum Ausprobieren</h4><p style="font-size:14px;">Sie testen die App schon während der Entwicklung selbst auf Ihrem Handy, über TestFlight.</p></div><div class="step-card"><div class="step-num">4</div><h4 style="font-size:16px;">Entwicklung mit wöchentlichen Updates</h4><p style="font-size:14px;">Sie sehen laufend den Fortschritt, statt am Ende eine Überraschung zu erleben.</p></div><div class="step-card"><div class="step-num">5</div><h4 style="font-size:16px;">Veröffentlichung &amp; Betreuung</h4><p style="font-size:14px;">Ich reiche die App bei App Store und Google Play ein und begleite Sie danach weiter.</p></div></div>
+      <ol class="tl-wrap"><li class="tl"><div class="tl-dot" style="background:linear-gradient(135deg,#31bcf6,#5ccfff)"><b>1</b></div><div class="tl-card"><h3>Kostenloses Erstgespräch</h3><p>Wir besprechen Ihre Idee, Ihren Betrieb und was die App wirklich leisten muss.</p></div></li><li class="tl"><div class="tl-dot" style="background:linear-gradient(135deg,#31bcf6,#5ccfff)"><b>2</b></div><div class="tl-card"><h3>Konzept &amp; fester Preis</h3><p>Sie erhalten ein klares Konzept und einen Fixpreis – keine Überraschungen später.</p></div></li><li class="tl"><div class="tl-dot" style="background:linear-gradient(135deg,#31bcf6,#5ccfff)"><b>3</b></div><div class="tl-card"><h3>Entwicklung &amp; Prototyp zum Ausprobieren</h3><p>Sie testen die App schon während der Entwicklung selbst auf Ihrem Handy (TestFlight) und sehen wöchentlich den Fortschritt.</p></div></li><li class="tl"><div class="tl-dot" style="background:linear-gradient(135deg,#31bcf6,#5ccfff)"><b>4</b></div><div class="tl-card"><h3>Veröffentlichung &amp; Betreuung</h3><p>Ich reiche die App bei App Store und Google Play ein und begleite Sie danach weiter.</p></div></li></ol>
     </div>
   </section>
 
@@ -1021,19 +1108,53 @@ header{border-bottom:0!important}
         <h2>Alles, was Ihre App können soll</h2>
         <p>Vom Login bis zur Apple Watch – die wichtigsten Bausteine auf einen Blick.</p>
       </div>
-      <div class="ext-grid six"><div class="ext-card"><div class="ext-ico" style="background:#0a9b7c;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bell"/></svg></div><span>Push-Benachrichtigungen</span></div><div class="ext-card"><div class="ext-ico" style="background:#1c2a39;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-watch"/></svg></div><span>Apple Watch</span></div><div class="ext-card"><div class="ext-ico" style="background:#3aa0ff;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-widget"/></svg></div><span>Homescreen-Widgets</span></div><div class="ext-card"><div class="ext-ico" style="background:#8a63d2;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg></div><span>Live Activities / Dynamic Island</span></div><div class="ext-card"><div class="ext-ico" style="background:#635bff;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-lock"/></svg></div><span>Login mit Apple &amp; Google</span></div><div class="ext-card"><div class="ext-ico" style="background:#00b894;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg></div><span>Karten &amp; Standort</span></div><div class="ext-card"><div class="ext-ico" style="background:#31bcf6;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg></div><span>KI (OpenAI: Sprache, Fotos, Text)</span></div><div class="ext-card"><div class="ext-ico" style="background:#ffb703;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-lang"/></svg></div><span>Mehrsprachig (DE/FR/IT/EN)</span></div><div class="ext-card"><div class="ext-ico" style="background:#3aa0ff;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wifi"/></svg></div><span>Funktioniert offline</span></div><div class="ext-card"><div class="ext-ico" style="background:#8a63d2;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-refresh"/></svg></div><span>Updates ohne Store-Wartezeit</span></div><div class="ext-card"><div class="ext-ico" style="background:#f4a261;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-layers"/></svg></div><span>iPhone, iPad, Android &amp; Mac</span></div><div class="ext-card"><div class="ext-ico" style="background:#00b894;"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tag"/></svg></div><span>Fester Preis, klarer Umfang</span></div></div>
+      <div class="fx-wrap"><div class="fx-top"><article class="fx-big" style="background:linear-gradient(135deg,#7d8bf8 0%,#b45cf0 100%)"><span class="fx-tile" style="color:#8a63d2"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bell"/></svg></span><h3>Push-Benachrichtigungen</h3><p>Nachrichten direkt aufs Handy: Neuigkeiten, Angebote und Erinnerungen an Ihre Nutzer.</p><span class="fx-tag">iOS · Android</span></article><article class="fx-big" style="background:linear-gradient(135deg,#17566e 0%,#1d6b83 100%)"><span class="fx-tile" style="color:#0f7a92"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-spark"/></svg></span><h3>KI (OpenAI: Sprache, Fotos, Text)</h3><p>Spracheingabe, Bilderkennung und intelligente Vorschläge direkt in Ihrer App.</p><span class="fx-tag">OpenAI</span></article><article class="fx-big" style="background:linear-gradient(135deg,#2c3583 0%,#3a469a 100%)"><span class="fx-tile" style="color:#3d4bb8"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-watch"/></svg></span><h3>Apple Watch</h3><p>Ihre App am Handgelenk: Kurzinfos und Aktionen, ohne das Handy zu zücken.</p><span class="fx-tag">watchOS</span></article></div></div>
+<div class="pb">
+ <div class="pb-text">
+  <h3>Widgets &amp; Live Activities: Ihre App immer im Blick</h3>
+  <p>Wichtiges direkt auf dem Startbildschirm und live auf dem Sperrbildschirm – ohne die App zu öffnen.</p>
+ </div>
+ <div class="pb-art" aria-hidden="true">
+ <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+   <filter id="pbSh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#0b2a55" flood-opacity=".28"/></filter>
+   <filter id="pbGlow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#ff6f61" flood-opacity=".55"/></filter>
+   <clipPath id="pbC1"><rect x="40" y="298" width="52" height="52" rx="13"/></clipPath>
+   <clipPath id="pbC2"><rect x="58" y="414" width="46" height="46" rx="12"/></clipPath>
+  </defs>
+  <rect x="62" y="22" width="340" height="560" rx="56" fill="rgba(255,255,255,.14)" stroke="#fff" stroke-width="16"/>
+  <g fill="none" stroke="rgba(255,255,255,.7)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(232 76)"><rect x="-10" y="4" width="20" height="16" rx="4" fill="rgba(255,255,255,.55)" stroke="none"/><path d="M-6 4V-1a6 6 0 0112 0v5"/></g>
+  <text x="232" y="150" text-anchor="middle" font-size="18" font-weight="600" fill="rgba(255,255,255,.75)">Sonntag, 20. September</text>
+  <text x="232" y="232" text-anchor="middle" font-size="80" font-weight="800" fill="rgba(255,255,255,.62)" letter-spacing="-2">09:41</text>
+  <g filter="url(#pbSh)"><rect x="30" y="278" width="382" height="104" rx="28" fill="rgba(255,255,255,.66)"/></g>
+  <image href="img/worktime-icon.webp" x="40" y="298" width="52" height="52" clip-path="url(#pbC1)"/>
+  <text x="106" y="314" font-size="17" font-weight="800" fill="#1c2a39">Work Time · läuft</text>
+  <text x="392" y="314" text-anchor="end" font-size="14" font-weight="600" fill="#5a6a82">Live</text>
+  <text x="106" y="342" font-size="26" font-weight="800" fill="#1c2a39">05:42:10</text>
+  <rect x="106" y="352" width="270" height="8" rx="4" fill="rgba(28,42,57,.15)"/><rect x="106" y="352" width="180" height="8" rx="4" fill="#31bcf6"/>
+  <rect x="46" y="398" width="350" height="110" rx="26" fill="rgba(255,255,255,.5)"/>
+  <image href="img/hofchoerbli-icon.webp" x="58" y="414" width="46" height="46" clip-path="url(#pbC2)"/>
+  <text x="118" y="431" font-size="16" font-weight="800" fill="#1c2a39">Widget · Hofchörbli</text>
+  <text x="384" y="431" text-anchor="end" font-size="13" font-weight="600" fill="#5a6a82">Heute</text>
+  <text x="118" y="455" font-size="15" font-weight="500" fill="#1c2a39">3 Hofläden in Ihrer Nähe</text>
+  <g stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"><path d="M10 168l32 22"/><path d="M52 148l8 30"/><path d="M-6 214l30 8"/></g>
+  <g class="pb-bell" filter="url(#pbGlow)"><circle cx="58" cy="248" r="46" fill="#ff6f61"/>
+   <g transform="translate(58 248) scale(2.1) translate(-12 -12)" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l2.5 1.5M9.5 3h5"/></g>
+  </g>
+ </svg>
+ </div>
+</div>
     </div>
   </section>
 
-  <section id="preise">
+  <section id="preise" style="background:linear-gradient(180deg,#f7fbff 0%,#e8f3fc 100%);">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Preise</span>
         <h2>Ihre App-Idee ab 3.500 CHF</h2>
         <p>Orientierung für die ersten Gespräche – der genaue Preis hängt vom Umfang ab und wird im Erstgespräch festgelegt.</p>
       </div>
-      <div class="price-grid"><div class="price-card"><h3>App einfach</h3><div class="pr">Fixpreis nach Erstgespräch</div><p style="font-size:14.5px;">Für eine klare Idee mit wenigen Bildschirmen.</p><ul><li><span class="ok-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>iOS und/oder Android</li><li><span class="ok-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Veröffentlichung inklusive</li></ul></div><div class="price-card good"><h3>App mit Konto &amp; Push</h3><div class="pr">Fixpreis nach Erstgespräch</div><p style="font-size:14.5px;">Login, Benachrichtigungen, eigenes Backend.</p><ul><li><span class="ok-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Login mit Apple &amp; Google</li><li><span class="ok-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Push-Benachrichtigungen</li><li><span class="ok-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Admin-Bereich</li></ul></div><div class="price-card"><h3>App mit KI / Watch / Widgets</h3><div class="pr">Fixpreis nach Erstgespräch</div><p style="font-size:14.5px;">Für anspruchsvollere Projekte mit KI-Funktionen.</p><ul><li><span class="ok-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>KI-Integration (OpenAI)</li><li><span class="ok-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Apple Watch / Widgets</li></ul></div></div>
-      <p class="price-note">Optionale monatliche Betreuung nach Veröffentlichung.</p>
+      <div class="pc-grid"><article class="pc"><span class="pc-lab" style="color:#31bcf6">App einfach</span><h3>Eine klare Idee, sauber umgesetzt</h3><p class="pc-desc">Für eine klare Idee mit wenigen Bildschirmen.</p><ul class="pc-list"><li><span class="pc-ck" style="color:#31bcf6"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>iOS und/oder Android</li><li><span class="pc-ck" style="color:#31bcf6"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Veröffentlichung inklusive</li></ul><div class="pc-price"><span class="pc-ab">Ab</span><div class="pc-num">3.500<small>CHF</small></div><div class="pc-note">Fixpreis nach Erstgespräch</div><div class="pc-note2">Optionale monatliche Betreuung nach Veröffentlichung.</div></div><a class="pc-btn" style="background:#31bcf6" href="#kontakt">Erstgespräch vereinbaren</a><a class="pc-btn2" href="#projekte">Beispiele ansehen</a></article><article class="pc"><span class="pc-lab" style="color:#17d6a8">App mit Konto &amp; Push</span><h3>Mit Login, Push und Admin-Bereich</h3><p class="pc-desc">Login, Benachrichtigungen, eigenes Backend.</p><ul class="pc-list"><li><span class="pc-ck" style="color:#17d6a8"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Login mit Apple &amp; Google</li><li><span class="pc-ck" style="color:#17d6a8"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Push-Benachrichtigungen</li><li><span class="pc-ck" style="color:#17d6a8"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Admin-Bereich</li></ul><div class="pc-price"><span class="pc-ab">&nbsp;</span><div class="pc-num pc-big">Fixpreis</div><div class="pc-note">Nach Erstgespräch – je nach Umfang</div><div class="pc-note2">Optionale monatliche Betreuung nach Veröffentlichung.</div></div><a class="pc-btn" style="background:#17d6a8" href="#kontakt">Erstgespräch vereinbaren</a><a class="pc-btn2" href="#projekte">Beispiele ansehen</a></article><article class="pc"><span class="pc-lab" style="color:#3f4960">App mit KI / Watch / Widgets</span><h3>Für anspruchsvollere Projekte</h3><p class="pc-desc">Für anspruchsvollere Projekte mit KI-Funktionen.</p><ul class="pc-list"><li><span class="pc-ck" style="color:#3f4960"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>KI-Integration (OpenAI)</li><li><span class="pc-ck" style="color:#3f4960"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>Apple Watch / Widgets</li></ul><div class="pc-price"><span class="pc-ab">&nbsp;</span><div class="pc-num pc-big">Fixpreis</div><div class="pc-note">Nach Erstgespräch – je nach Umfang</div><div class="pc-note2">Optionale monatliche Betreuung nach Veröffentlichung.</div></div><a class="pc-btn" style="background:#3f4960" href="#kontakt">Erstgespräch vereinbaren</a><a class="pc-btn2" href="#projekte">Beispiele ansehen</a></article></div>
     </div>
   </section>
 

@@ -20,14 +20,14 @@
     --text-soft:#5b6472;
     --navy:#1c2a39;
     --navy-soft:#3f4960;
-    --accent:#fe6c75;
-    --accent-dark:#e85560;
+    --accent:#31bcf6;
+    --accent-dark:#0089c2;
     --panel-blue:#f2fbff;
     --panel-purple:#f6f3fc;
     --panel-orange:#fff2e3;
     --panel-sky:#dff6ff;
     --panel-yellow:#fff2bd;
-    --panel-pink:#ffe9eb;
+    --panel-pink:#e4f7ff;
     --panel-teal:#d1fff4;
     --panel-neutral:#f8fafc;
     --radius-lg:24px;
@@ -80,7 +80,7 @@
     white-space:nowrap;
   }
   .btn:hover{transform:translateY(-2px);}
-  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -8px rgba(254,108,117,.55);}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -8px rgba(49,188,246,.55);}
   .btn-primary:hover{background:var(--accent-dark);}
   .btn-outline{background:#fff;color:var(--navy);border-color:#e3e7ee;}
   .btn-outline:hover{border-color:var(--navy);}
@@ -97,7 +97,7 @@
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:var(--navy);}
   .logo-mark{
     width:34px;height:34px;border-radius:10px;
-    background:linear-gradient(135deg,var(--accent),#ffb199);
+    background:linear-gradient(135deg,var(--accent),#8fdcff);
     position:relative;flex:none;
   }
   .logo-mark::after{
@@ -192,7 +192,7 @@
   .compare-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:stretch;}
   .compare-card{background:#fff;border-radius:var(--radius-lg);padding:32px;border:1px solid #eef0f4;}
   .compare-card.bad{opacity:.8;}
-  .compare-card.good{border:2px solid var(--accent);box-shadow:0 20px 40px -20px rgba(254,108,117,.4);}
+  .compare-card.good{border:2px solid var(--accent);box-shadow:0 20px 40px -20px rgba(49,188,246,.4);}
   .compare-vs{
     align-self:center;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;
     display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;
@@ -296,13 +296,13 @@
 
   /* Final CTA */
   .final-cta{
-    background:linear-gradient(135deg,var(--accent),#ff9d8f);
+    background:linear-gradient(135deg,var(--accent),#8fdcff);
     border-radius:32px;margin:0 24px;padding:64px 40px;text-align:center;color:#fff;
   }
   .final-cta h2{color:#fff;}
   .final-cta p{color:rgba(255,255,255,.9);}
   .final-cta .btn-primary{background:#fff;color:var(--accent-dark);box-shadow:none;}
-  .final-cta .btn-primary:hover{background:#fff5f5;}
+  .final-cta .btn-primary:hover{background:#f0faff;}
 
   footer{padding:64px 0 32px;border-top:1px solid #eef0f4;margin-top:40px;}
   .footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px;margin-bottom:48px;}
@@ -366,7 +366,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .proj-title h3{margin:0;font-size:28px}
 .proj-text p{font-size:16px}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
-.pills span{padding:5px 12px;border-radius:999px;background:var(--panel-pink);border:1px solid #ffd6da;color:var(--navy-soft);font-size:12.5px;font-weight:700}
+.pills span{padding:5px 12px;border-radius:999px;background:var(--panel-pink);border:1px solid #bfe9fb;color:var(--navy-soft);font-size:12.5px;font-weight:700}
 .proj-links{display:flex;gap:20px;flex-wrap:wrap}
 .proj-links a{font-weight:700;color:var(--accent-dark);font-size:15px}
 .proj-links a:hover{text-decoration:underline}
@@ -377,7 +377,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .proj-panel .shot:nth-child(2){transform:rotate(4deg) translateY(-12px);margin-left:-3%}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
 .price-card{background:#fff;border-radius:var(--radius-lg);padding:32px;border:1px solid #eef0f4;display:flex;flex-direction:column}
-.price-card.good{border:2px solid var(--accent);box-shadow:0 20px 40px -20px rgba(254,108,117,.4)}
+.price-card.good{border:2px solid var(--accent);box-shadow:0 20px 40px -20px rgba(49,188,246,.4)}
 .price-card h3{font-size:20px;margin-bottom:6px}
 .price-card .pr{font-weight:800;color:var(--accent-dark);margin-bottom:10px}
 .price-card ul{margin-top:8px}
@@ -397,8 +397,8 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .cta-form textarea{min-height:96px;resize:vertical}
 .cta-form .btn{justify-self:start}
 .final-cta .btn-primary{background:#fff;color:var(--accent-dark);box-shadow:none}
-.final-cta .btn-primary:hover{background:#fff5f5}
-.cta-form .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -8px rgba(254,108,117,.55)}
+.final-cta .btn-primary:hover{background:#f0faff}
+.cta-form .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -8px rgba(49,188,246,.55)}
 .cta-form .btn-primary:hover{background:var(--accent-dark)}
 .footer-bottom a{color:var(--text-soft)}.footer-bottom a:hover{color:var(--navy)}
 @media (max-width:960px){
@@ -413,13 +413,13 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 @media (max-width:560px){.cards-grid.three{grid-template-columns:1fr}.hero h1{font-size:34px}.ext-grid.six{grid-template-columns:repeat(2,1fr)}.steps-grid.five{grid-template-columns:1fr}.nav-right .btn-ghost{display:none}}
 .chat-bubble svg.i,.code-line svg.i,.float-chip svg.i{display:inline-block}
 .stats-section{position:relative;overflow:hidden;background:linear-gradient(160deg,#1c2a39 0%,#22344a 100%)}
-.stats-section::before{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(254,108,117,.28),transparent 68%);pointer-events:none}
+.stats-section::before{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(49,188,246,.28),transparent 68%);pointer-events:none}
 .stats-section::after{content:"";position:absolute;width:460px;height:460px;left:-160px;bottom:-220px;border-radius:50%;background:radial-gradient(circle,rgba(143,214,255,.16),transparent 68%);pointer-events:none}
 .stats-section .wrap{position:relative;z-index:1}
 .stat-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
 .stat-tile{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:28px 24px;backdrop-filter:blur(6px);transition:transform .2s ease,background .2s ease;text-align:left}
 .stat-tile:hover{transform:translateY(-4px);background:rgba(255,255,255,.09)}
-.stat-ic{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;background:rgba(254,108,117,.16);color:var(--accent);font-size:22px;margin-bottom:22px}
+.stat-ic{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;background:rgba(49,188,246,.16);color:var(--accent);font-size:22px;margin-bottom:22px}
 .stat-v{font-size:46px;font-weight:800;line-height:1;color:#fff;letter-spacing:-.02em;white-space:nowrap}
 .stat-v em{font-style:normal;color:var(--accent)}
 .stat-v.sm{font-size:24px;line-height:46px;letter-spacing:-.01em}
@@ -551,6 +551,15 @@ header{border-bottom:0!important}
 }
 @media(max-width:380px){.nav-right .btn{padding:8px 12px;font-size:12px}}
 
+/* ===== Theme blue (Test) ===== */
+.btn-primary,.cta-form .btn-primary,.legal-tabs a.on{color:var(--navy)}
+.btn-primary:hover,.cta-form .btn-primary:hover{background:#8fdcff;color:var(--navy)}
+.legal-tabs a.on{background:var(--accent);border-color:var(--accent)}
+.final-cta{background:linear-gradient(135deg,#0089c2,#31bcf6)}
+.final-cta .btn-primary{color:var(--navy)}
+.stat-v em{color:#5ccfff}
+.stat-card{background:#e4f7ff}
+
 .legal-hero{padding:64px 0 24px;text-align:left}
 .legal-hero h1{font-size:44px;margin:0 0 10px;letter-spacing:-.01em}
 .legal-hero p{max-width:640px;margin:0}
@@ -586,8 +595,8 @@ header{border-bottom:0!important}
 <!--MNAV--><div class="mnav" id="mnav" aria-hidden="true">
 <svg class="mnav-bg" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
  <defs>
-  <linearGradient id="mB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#fff3f4"/></linearGradient>
-  <radialGradient id="mG1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fe6c75" stop-opacity=".26"/><stop offset="1" stop-color="#fe6c75" stop-opacity="0"/></radialGradient>
+  <linearGradient id="mB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f0faff"/></linearGradient>
+  <radialGradient id="mG1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#31bcf6" stop-opacity=".26"/><stop offset="1" stop-color="#31bcf6" stop-opacity="0"/></radialGradient>
   <radialGradient id="mG2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5ccfff" stop-opacity=".30"/><stop offset="1" stop-color="#5ccfff" stop-opacity="0"/></radialGradient>
   <pattern id="mD" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#1c2a39" opacity=".07"/></pattern>
   <filter id="mSh" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1c2a39" flood-opacity=".16"/></filter>
@@ -596,12 +605,12 @@ header{border-bottom:0!important}
  <circle cx="370" cy="70" r="200" fill="url(#mG1)"/><circle cx="20" cy="740" r="210" fill="url(#mG2)"/>
  <g fill="none" stroke="#b9d0e7" stroke-width="1.3" stroke-dasharray="3 8" stroke-linecap="round"><circle cx="400" cy="120" r="150"/><circle cx="0" cy="700" r="170"/></g>
  <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -12;0 0" dur="6s" repeatCount="indefinite"/>
-  <g transform="translate(346 236) rotate(12)" filter="url(#mSh)"><rect width="56" height="56" rx="17" fill="#fff"/><use href="#ic-bell" x="14" y="14" width="28" height="28" fill="none" stroke="#fe6c75" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <g transform="translate(346 236) rotate(12)" filter="url(#mSh)"><rect width="56" height="56" rx="17" fill="#fff"/><use href="#ic-bell" x="14" y="14" width="28" height="28" fill="none" stroke="#31bcf6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></g></g>
  <g><animateTransform attributeName="transform" type="translate" values="0 0;0 10;0 0" dur="7s" repeatCount="indefinite"/>
   <g transform="translate(-22 560) rotate(-10)" filter="url(#mSh)"><rect width="56" height="56" rx="17" fill="#fff"/><use href="#ic-chart" x="14" y="14" width="28" height="28" fill="none" stroke="#3aa0ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></g></g>
  <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 0" dur="5.4s" repeatCount="indefinite"/>
-  <g transform="translate(350 640) rotate(8)" filter="url(#mSh)"><rect width="56" height="56" rx="17" fill="#1c2a39"/><use href="#ic-code" x="14" y="14" width="28" height="28" fill="none" stroke="#fe6c75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g>
- <g fill="#fe6c75"><path d="M60 150l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"><animate attributeName="opacity" values=".2;1;.2" dur="3.4s" repeatCount="indefinite"/></path></g>
+  <g transform="translate(350 640) rotate(8)" filter="url(#mSh)"><rect width="56" height="56" rx="17" fill="#1c2a39"/><use href="#ic-code" x="14" y="14" width="28" height="28" fill="none" stroke="#31bcf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+ <g fill="#31bcf6"><path d="M60 150l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"><animate attributeName="opacity" values=".2;1;.2" dur="3.4s" repeatCount="indefinite"/></path></g>
  <g fill="#5ccfff"><path d="M330 520l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z"><animate attributeName="opacity" values="1;.2;1" dur="3s" repeatCount="indefinite"/></path></g>
  <g fill="#ffb703"><circle cx="40" cy="430" r="4"><animate attributeName="opacity" values=".3;1;.3" dur="2.6s" repeatCount="indefinite"/></circle><circle cx="372" cy="380" r="3.5" fill="#0a9b7c"><animate attributeName="opacity" values="1;.3;1" dur="3.2s" repeatCount="indefinite"/></circle></g>
 </svg>

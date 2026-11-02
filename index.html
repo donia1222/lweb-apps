@@ -620,6 +620,21 @@ html,body{overflow-x:clip}
  .proj-panel .shot:nth-child(2){margin-left:-5%}
 }
 button,input,textarea,.btn{font-family:inherit}
+
+/* ===== Hero: Telefon-Facher oben, Text darunter (statt Text/SVG nebeneinander) ===== */
+.hero{padding:96px 0 72px}
+.hero-new{display:flex;flex-direction:column;align-items:center}
+.hero-copy{max-width:720px;margin:0 auto;text-align:center}
+.hero-copy .eyebrow{margin-bottom:16px}
+.hero-copy h1{font-size:56px}
+.hero-copy p.lead{margin:0 auto}
+.hero-copy .check-list{align-items:center}
+.hero-copy .check-list li{justify-content:center;text-align:left}
+.hero-copy .hero-ctas{justify-content:center}
+@media(max-width:960px){
+  .hero{padding:48px 0 24px}
+  .hero-copy h1{font-size:34px}
+}
 .nav-links a{position:relative}
 .nav-links a.is-active::after{content:'';position:absolute;left:4px;right:4px;bottom:-7px;height:3px;border-radius:3px;background:var(--accent)}
 .pagefade{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0;background:#fff;transition:opacity 230ms cubic-bezier(.4,0,.2,1)}
@@ -836,8 +851,8 @@ header{background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(22px) satur
 </div><!--/MNAV-->
 <main>
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
+    <div class="wrap hero-new">
+      <div class="hero-copy">
         <span class="eyebrow">App-Entwicklung Rheintal &amp; Ostschweiz</span>
         <h1><em>Ihre App.</em> Von Hand gebaut, im App Store veröffentlicht.</h1>
         <p class="lead">Ich entwickle native und plattformübergreifende Apps für Schweizer KMU – direkt vom Entwickler, ohne Agenturaufschlag. Von der Idee bis zur Veröffentlichung im App Store und bei Google Play.</p>
@@ -851,137 +866,6 @@ header{background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(22px) satur
           <a href="#projekte" class="btn btn-outline">Apps ansehen</a>
         </div>
         <p class="hero-note">Unverbindlich · Antwort meist innert 1–2 Tagen</p>
-           </div>
-      <div class="mock-wrap">
-<div class="hero-art">
-<svg viewBox="0 0 520 560" role="img" aria-label="Animierte Illustration: Smartphone mit App, Push-Nachricht, Statistiken und Chat" xmlns="http://www.w3.org/2000/svg">
-<defs>
- <linearGradient id="hBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf7ff"/><stop offset="1" stop-color="#fff1f2"/></linearGradient>
- <linearGradient id="hCoral" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fe6c75"/><stop offset="1" stop-color="#ff9d8f"/></linearGradient>
- <radialGradient id="hGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fe6c75" stop-opacity=".22"/><stop offset="1" stop-color="#fe6c75" stop-opacity="0"/></radialGradient>
- <radialGradient id="hGlow2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5ccfff" stop-opacity=".28"/><stop offset="1" stop-color="#5ccfff" stop-opacity="0"/></radialGradient>
- <pattern id="hDots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#1c2a39" opacity=".07"/></pattern>
- <filter id="hSh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#1c2a39" flood-opacity=".2"/></filter>
- <filter id="hShS" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1c2a39" flood-opacity=".16"/></filter>
- <clipPath id="hScreen"><rect x="172" y="72" width="176" height="396" rx="26"/></clipPath>
- <symbol id="h-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1112 0v5l2 2H4l2-2zM10 21h4"/></symbol>
- <symbol id="h-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
- <symbol id="h-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h11L21 7H6"/></symbol>
- <symbol id="h-cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
- <symbol id="h-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></symbol>
- <symbol id="h-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-6"/></symbol>
- <symbol id="h-apple" viewBox="0 0 24 24"><path d="M12 7c1-2 3-2 3-2s0 2-1.5 3M8 9c-2 0-3.5 2-3.5 5 0 3 2 6 4 6 1 0 1.5-.5 3.5-.5s2.5.5 3.5.5c2 0 4-3 4-4-2-.5-3-4 0-5.5-1-1.5-2.5-1.5-3.5-1.5-1.5 0-2 .5-4 .5S9.5 9 8 9z"/></symbol>
- <symbol id="h-android" viewBox="0 0 24 24"><path d="M5 16a7 7 0 0114 0H5zM8 6l1.5 2.5M16 6l-1.5 2.5M6 17v3M18 17v3M10 20h4"/><circle cx="9.5" cy="13" r=".6"/><circle cx="14.5" cy="13" r=".6"/></symbol>
- <symbol id="h-spark" viewBox="0 0 24 24"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6z"/></symbol>
- <symbol id="h-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
-</defs>
-
-<!-- Hintergrund -->
-<rect x="14" y="20" width="492" height="520" rx="56" fill="url(#hBg)"/>
-<rect x="14" y="20" width="492" height="520" rx="56" fill="url(#hDots)"/>
-<circle cx="430" cy="110" r="150" fill="url(#hGlow)"/>
-<circle cx="90" cy="470" r="150" fill="url(#hGlow2)"/>
-
-<!-- Umlaufbahnen -->
-<g fill="none" stroke="#b9d0e7" stroke-width="1.4" stroke-dasharray="3 8" stroke-linecap="round" opacity=".9">
- <circle cx="260" cy="270" r="228"/><circle cx="260" cy="270" r="176"/>
-</g>
-<g><animateTransform attributeName="transform" type="rotate" from="0 260 270" to="360 260 270" dur="60s" repeatCount="indefinite"/>
- <circle cx="488" cy="270" r="7" fill="#fe6c75"/><circle cx="32" cy="270" r="5" fill="#1c2a39"/><circle cx="260" cy="42" r="4" fill="#0a9b7c"/>
-</g>
-<g><animateTransform attributeName="transform" type="rotate" from="360 260 270" to="0 260 270" dur="44s" repeatCount="indefinite"/>
- <circle cx="436" cy="270" r="5" fill="#ffb703"/><circle cx="260" cy="446" r="4" fill="#8a63d2"/>
-</g>
-
-<!-- Smartphone -->
-<g filter="url(#hSh)">
- <rect x="160" y="60" width="200" height="420" rx="36" fill="#fff" stroke="#e3e7ee" stroke-width="1.5"/>
-</g>
-<g clip-path="url(#hScreen)">
- <rect x="172" y="72" width="176" height="396" fill="#fbfcfe"/>
- <rect x="232" y="82" width="56" height="14" rx="7" fill="#1c2a39"/>
- <circle cx="196" cy="128" r="14" fill="#ffe9eb"/><circle cx="196" cy="125" r="4.5" fill="#fe6c75"/><path d="M187.5 136c1.6-4 4.4-5.6 8.5-5.6s6.9 1.6 8.5 5.6" fill="#fe6c75"/>
- <rect x="218" y="117" width="70" height="8" rx="4" fill="#1c2a39" opacity=".88"/><rect x="218" y="131" width="46" height="6" rx="3" fill="#d9dee7"/>
- <!-- Hauptkarte -->
- <rect x="184" y="152" width="152" height="96" rx="18" fill="url(#hCoral)"/>
- <circle cx="226" cy="200" r="26" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="7"/>
- <circle cx="226" cy="200" r="26" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-dasharray="163.4" stroke-dashoffset="163" transform="rotate(-90 226 200)">
-  <animate attributeName="stroke-dashoffset" values="163;24;24;163" keyTimes="0;.32;.9;1" dur="9s" repeatCount="indefinite"/>
- </circle>
- <use href="#h-spark" x="214" y="188" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linejoin="round"/>
- <rect x="264" y="182" width="56" height="8" rx="4" fill="#fff"/><rect x="264" y="198" width="42" height="6" rx="3" fill="#fff" opacity=".6"/><rect x="264" y="212" width="48" height="6" rx="3" fill="#fff" opacity=".6"/>
- <!-- Kacheln -->
- <g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-  <g class="tile" style="animation-delay:.0s"><rect x="188" y="262" width="44" height="44" rx="14" fill="#ffe9eb" stroke="none"/><use href="#h-bell" x="198" y="272" width="24" height="24" stroke="#fe6c75"/></g>
-  <g class="tile" style="animation-delay:.18s"><rect x="244" y="262" width="44" height="44" rx="14" fill="#dff6ff" stroke="none"/><use href="#h-pin" x="254" y="272" width="24" height="24" stroke="#1a9fd8"/></g>
-  <g class="tile" style="animation-delay:.36s"><rect x="300" y="262" width="44" height="44" rx="14" fill="#fff2bd" stroke="none"/><use href="#h-cart" x="310" y="272" width="24" height="24" stroke="#c48a00"/></g>
-  <g class="tile" style="animation-delay:.54s"><rect x="188" y="318" width="44" height="44" rx="14" fill="#d1fff4" stroke="none"/><use href="#h-cal" x="198" y="328" width="24" height="24" stroke="#0a9b7c"/></g>
-  <g class="tile" style="animation-delay:.72s"><rect x="244" y="318" width="44" height="44" rx="14" fill="#f1ecfc" stroke="none"/><use href="#h-chat" x="254" y="328" width="24" height="24" stroke="#8a63d2"/></g>
-  <g class="tile" style="animation-delay:.9s"><rect x="300" y="318" width="44" height="44" rx="14" fill="#fff2e3" stroke="none"/><use href="#h-chart" x="310" y="328" width="24" height="24" stroke="#f08a3c"/></g>
- </g>
- <rect x="188" y="374" width="100" height="8" rx="4" fill="#e6eaf1"/><rect x="188" y="390" width="64" height="6" rx="3" fill="#eef0f4"/>
- <!-- Tab-Leiste -->
- <rect x="184" y="414" width="152" height="44" rx="22" fill="#1c2a39"/>
- <circle cx="214" cy="436" r="17" fill="#fe6c75" opacity=".95"><animate attributeName="cx" values="214;250;286;322;214" keyTimes="0;.22;.5;.78;1" dur="9s" repeatCount="indefinite"/></circle>
- <g fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-  <use href="#h-cal" x="204" y="426" width="20" height="20"/><use href="#h-pin" x="240" y="426" width="20" height="20"/><use href="#h-chat" x="276" y="426" width="20" height="20"/><use href="#h-chart" x="312" y="426" width="20" height="20"/>
- </g>
-</g>
-
-<!-- Push-Nachricht -->
-<g transform="translate(322 38)"><g class="fl" style="animation-duration:6.4s"><g class="push">
- <g filter="url(#hShS)"><rect width="176" height="64" rx="18" fill="#fff"/></g>
- <circle cx="34" cy="32" r="18" fill="url(#hCoral)"/><use href="#h-bell" x="24" y="22" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
- <text x="60" y="28" font-size="12" font-weight="800" fill="#1c2a39">Neue Bestellung</text>
- <text x="60" y="45" font-size="10.5" font-weight="600" fill="#8a93a6">Push · gerade eben</text>
- <circle cx="160" cy="16" r="5" fill="#fe6c75"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
-</g></g></g>
-
-<!-- Statistik-Karte -->
-<g transform="translate(22 356)"><g class="fl" style="animation-duration:7.2s;animation-delay:-2s">
- <g filter="url(#hShS)"><rect width="150" height="104" rx="18" fill="#fff"/></g>
- <text x="16" y="26" font-size="11.5" font-weight="800" fill="#1c2a39">Statistiken</text>
- <g fill="#fe6c75">
-  <rect x="16" y="56" width="16" height="30" rx="5" opacity=".35"><animate attributeName="height" values="30;44;30" dur="3.6s" repeatCount="indefinite"/><animate attributeName="y" values="56;42;56" dur="3.6s" repeatCount="indefinite"/></rect>
-  <rect x="40" y="46" width="16" height="40" rx="5" opacity=".55"><animate attributeName="height" values="40;26;40" dur="3.6s" begin="-.9s" repeatCount="indefinite"/><animate attributeName="y" values="46;60;46" dur="3.6s" begin="-.9s" repeatCount="indefinite"/></rect>
-  <rect x="64" y="38" width="16" height="48" rx="5" opacity=".75"><animate attributeName="height" values="48;34;48" dur="3.6s" begin="-1.8s" repeatCount="indefinite"/><animate attributeName="y" values="38;52;38" dur="3.6s" begin="-1.8s" repeatCount="indefinite"/></rect>
-  <rect x="88" y="52" width="16" height="34" rx="5" opacity=".55"><animate attributeName="height" values="34;50;34" dur="3.6s" begin="-2.7s" repeatCount="indefinite"/><animate attributeName="y" values="52;36;52" dur="3.6s" begin="-2.7s" repeatCount="indefinite"/></rect>
-  <rect x="112" y="34" width="16" height="52" rx="5"><animate attributeName="height" values="52;38;52" dur="3.6s" begin="-.4s" repeatCount="indefinite"/><animate attributeName="y" values="34;48;34" dur="3.6s" begin="-.4s" repeatCount="indefinite"/></rect>
- </g>
-</g></g>
-
-<!-- iOS / Android / Code Chips -->
-<g transform="translate(38 168)"><g class="fl" style="animation-duration:5.4s;animation-delay:-1s">
- <g filter="url(#hShS)"><rect width="52" height="52" rx="16" fill="#fff"/></g>
- <use href="#h-apple" x="12" y="12" width="28" height="28" fill="none" stroke="#1c2a39" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-</g></g>
-<g transform="translate(434 214)"><g class="fl" style="animation-duration:6.1s;animation-delay:-3s">
- <g filter="url(#hShS)"><rect width="52" height="52" rx="16" fill="#fff"/></g>
- <use href="#h-android" x="12" y="12" width="28" height="28" fill="none" stroke="#0a9b7c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-</g></g>
-<g transform="translate(18 252)"><g class="fl" style="animation-duration:6.2s;animation-delay:-1.5s">
- <image href="img/app-store-badge.webp" x="0" y="0" width="132" height="51" preserveAspectRatio="xMidYMid meet" filter="url(#hShS)"/>
-</g></g>
-<g transform="translate(346 296)"><g class="fl" style="animation-duration:6.8s;animation-delay:-4s">
- <image href="img/google-play.png" x="0" y="0" width="156" height="46.4" preserveAspectRatio="xMidYMid meet" filter="url(#hShS)"/>
-</g></g>
-
-<!-- Chat-Blase -->
-<g transform="translate(330 400)"><g class="fl" style="animation-duration:5.8s;animation-delay:-2.4s">
- <g filter="url(#hShS)"><path d="M22 0h84a22 22 0 0122 22v0a22 22 0 01-22 22H44l-22 14v-14A22 22 0 010 22v0A22 22 0 0122 0z" fill="url(#hCoral)"/></g>
- <use href="#h-spark" x="16" y="10" width="22" height="22" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
- <circle cx="60" cy="22" r="4" fill="#fff"><animate attributeName="opacity" values=".35;1;.35" dur="1.4s" repeatCount="indefinite"/></circle>
- <circle cx="76" cy="22" r="4" fill="#fff"><animate attributeName="opacity" values=".35;1;.35" dur="1.4s" begin=".2s" repeatCount="indefinite"/></circle>
- <circle cx="92" cy="22" r="4" fill="#fff"><animate attributeName="opacity" values=".35;1;.35" dur="1.4s" begin=".4s" repeatCount="indefinite"/></circle>
-</g></g>
-
-<!-- Funken -->
-<g fill="#fe6c75"><path class="tw" style="animation-delay:0s" d="M110 96l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></g>
-<g fill="#5ccfff"><path class="tw" style="animation-delay:-1.2s" d="M462 420l2.5 6.5 6.5 2.5-6.5 2.5-2.5 6.5-2.5-6.5-6.5-2.5 6.5-2.5z"/></g>
-<g fill="#ffb703"><path class="tw" style="animation-delay:-2.1s" d="M96 300l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></g>
-</svg>
-</div>
-
       </div>
     </div>
   </section>
